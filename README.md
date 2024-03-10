@@ -38,4 +38,4 @@ coding!
 - Sharaf Anees: [GitHub](https://github.com/sharafcs50) 
 
    ...
-- Umer Khokhar #n: [GitHub](https://github.com/Umer-Khokhar) / [LinkedIn](https://www.linkedin.com/in/umer-khokhar-642301284/)
+- Umer Khokhar: [GitHub](https://github.com/Umer-Khokhar) / [LinkedIn](https://www.linkedin.com/in/umer-khokhar-642301284/)
