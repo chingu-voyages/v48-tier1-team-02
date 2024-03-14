@@ -35,7 +35,7 @@ your repo access and to practice PR'ing with your team *before* you start
 coding!
 
 - Ahmed Sohail: [GitHub](https://github.com/Ahmed-Sohail2000) / [LinkedIn](https://www.linkedin.com/in/ahmed-sohail/)
-- Sharaf Anees: [GitHub](https://github.com/sharafcs50) 
+- Sharaf Anees: [GitHub](https://github.com/sharafcs50) / [LinkedIn](https://www.linkedin.com/in/sharafrica/)
 - Nadiia Lashtun: [GitHub](https://github.com/Nadiia-Lashtun) / [LinkedIn](https://www.linkedin.com/in/lashtun/)
    ...
 - Umer Khokhar: [GitHub](https://github.com/Umer-Khokhar) / [LinkedIn](https://www.linkedin.com/in/umer-khokhar-642301284/)
