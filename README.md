@@ -39,3 +39,4 @@ coding!
 - Nadiia Lashtun: [GitHub](https://github.com/Nadiia-Lashtun) / [LinkedIn](https://www.linkedin.com/in/lashtun/)
    ...
 - Umer Khokhar: [GitHub](https://github.com/Umer-Khokhar) / [LinkedIn](https://www.linkedin.com/in/umer-khokhar-642301284/)
+- Florin Roșoga: [GitHub](https://github.com/florinrosoga/) / [LinkedIn](https://www.linkedin.com/in/florinrosoga/)
