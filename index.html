@@ -1,19 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/style.css">
-    <title>DinoPedia</title>
-</head>
-<body>
-    <!-- Heading (wrap it inside of navbar or whatever you want) -->
-    <h1>DinoPedia</h1>
-    <!-- Footer  -->
-    <footer class="footer">
-        <!-- Team repo name  -->
-        <p>Check out our team's GitHub repository: <a href="https://github.com/chingu-voyages/v48-tier1-team-02.git">Team GitHub Repo</a></p>
-    </footer>
-    <script src="src/js/app.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="src/css/style.css" />
+		<title>Dino World</title>
+	</head>
+	<body>
+		<!-- ** FLORIN ** Heading (wrap it inside of navbar or whatever you want) -->
+
+
+		<!-- Search Bar -->
+		<div class="search-bar">
+			<input type="text" placeholder="Search..." class="search-input" />
+			<button class="search-button">Search</button>
+		</div>
+
+		<!-- Cards -->
+		<div class="dinosaur-container">
+			<!-- Loop Start -->
+            <!-- Cards below will be loaded from the data with a loop -->
+			<div class="dinosaur-each">
+				<img src="" alt="Image Description" />
+				<div class="button-container">
+					<button>Show Details</button>
+				</div>
+				<div class="details">
+					<p>Import Description Here and Hide when the button is clicked</p>
+				</div>
+			</div>
+			<!-- Loop End -->
+		</div>
+
+		<!-- Show More Button  -->
+		<button id="showMoreBtn">Show More</button> <!-- Function will be applied to this button to load -->
+
+		<!-- Diet Chart  -->
+		<div id="chart_div">
+			<img src="" alt="Pie Chart data of Diet Chart" />
+		</div>
+
+		<!-- Footer  -->
+		<footer class="footer">
+			<!-- Team repo name  -->
+			<p>
+				Check out our team's GitHub repository:
+				<a href="https://github.com/chingu-voyages/v48-tier1-team-02.git"
+					>Team GitHub Repo</a
+				>
+			</p>
+		</footer>
+		<script src="src/js/app.js"></script>
+	</body>
 </html>
