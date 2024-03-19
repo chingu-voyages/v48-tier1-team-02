@@ -8,46 +8,60 @@
 	</head>
 	<body>
 		<!-- ** FLORIN ** Heading (wrap it inside of navbar or whatever you want) -->
-		<div class="navbar">
-			<div class="logo">
-				<img src="https://cdn-icons-png.flaticon.com/256/5559/5559218.png" alt="DinoWorld Logo"> <!-- Replace 'logo' with dino logo -->
-			</div>
-			<div class="navbar-links">
-				<a href="list-of-dinos.html">List of Dinos</a>
-				<a href="diet-chart.html">Diet Chart</a>
-				<a href="map.html">Map</a>
-			</div>
-		</div>
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="https://cdn-icons-png.flaticon.com/256/5559/5559218.png" alt="DinoWorld Logo"> <!-- Replace 'logo' with dino logo -->
+                </div>
+                <div class="navbar-links">
+                    <a href="list-of-dinos.html">List of Dinos</a>
+                    <a href="diet-chart.html">Diet Chart</a>
+                    <a href="map.html">Map</a>
+                </div>
+            </div>
+        </header>
 
-		<!-- Search Bar -->
-		<div class="search-bar">
-			<input type="text" placeholder="Search..." class="search-input" />
-			<button class="search-button">Search</button>
-		</div>
+		<main>
+            <!-- Hero section -->
+            <section>
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Search..." class="search-input" />
+                    <button class="search-button">Search</button>
+                </div>
+            </section>
 
-		<!-- Cards -->
-		<div class="dinosaur-container">
-			<!-- Loop Start -->
-            <!-- Cards below will be loaded from the data with a loop -->
-			<div class="dinosaur-each">
-				<img src="" alt="Image Description" />
-				<div class="button-container">
-					<button>Show Details</button>
-				</div>
-				<div class="details">
-					<p>Import Description Here and Hide when the button is clicked</p>
-				</div>
-			</div>
-			<!-- Loop End -->
-		</div>
+            <!-- Cards section -->
+            <section>
+                <!-- Cards -->
+		        <div class="dinosaur-container">
+			        <!-- Loop Start -->
+                    <!-- Cards below will be loaded from the data with a loop -->
+			        <div class="dinosaur-each">
+			        	<img src="" alt="Image Description" />
+			        	<div class="button-container">
+			        		<button>Show Details</button>
+			        	</div>
+			        	<div class="details">
+				        	<p>Import Description Here and Hide when the button is clicked</p>
+			        	</div>
+			        </div>
+			        <!-- Loop End -->
+		        </div>
 
-		<!-- Show More Button  -->
-		<button id="showMoreBtn">Show More</button> <!-- Function will be applied to this button to load -->
+		        <!-- Show More Button  -->
+		        <button id="showMoreBtn">Show More</button> <!-- Function will be applied to this button to load -->
 
-		<!-- Diet Chart  -->
-		<div id="chart_div">
-			<img src="" alt="Pie Chart data of Diet Chart" />
-		</div>
+            </section>
+
+            <!-- Chart section -->
+            <section>
+                <!-- Diet Chart  -->
+                <div id="chart_div">
+                    <img src="" alt="Pie Chart data of Diet Chart" />
+                    </div>
+            </section>
+        </main>
 
 		<!-- Footer  -->
 		<footer class="footer">
