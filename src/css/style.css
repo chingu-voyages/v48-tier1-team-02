@@ -1,0 +1,24 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #153b50; /* Light grey background */
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.logo img {
+    height: 50px; /* Adjust based on your logo's size */
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #e0fbfc; /* Dark grey color */
+    margin-left: 20px; /* Space between links */
+    font-size: 16px;
+}
+
+.navbar-links a:hover {
+    color: #4392f1; /* Change color on hover */
+}
