@@ -32,34 +32,36 @@
             </section>
 
             <!-- Cards section -->
-            <section>
-                <!-- Cards -->
-		        <div class="dinosaur-container">
-			        <!-- Loop Start -->
-                    <!-- Cards below will be loaded from the data with a loop -->
-			        <div class="dinosaur-each">
-			        	<img src="" alt="Image Description" />
-			        	<div class="button-container">
-			        		<button>Show Details</button>
+            <section class="dinosaur-section">
+				<div class="container">
+               		<!-- Cards -->
+		        	<div class="dinosaur-section__cards-container">
+			        	<!-- Loop Start -->
+                    	<!-- Cards below will be loaded from the data with a loop -->
+			        	<div class="dinosaur-section__card">
+			        		<img src="https://cdn-icons-png.flaticon.com/256/5559/5559218.png"  class="dinosaur-section__card-img" alt="Image Description" />
+			        		<button class="dinosaur-section__card-button">Show Details</button>
+			        	
+			        		<div class="dinosaur-section__card-details">
+				        		<p>Import Description Here and Hide when the button is clicked</p>
+			        		</div>
 			        	</div>
-			        	<div class="details">
-				        	<p>Import Description Here and Hide when the button is clicked</p>
-			        	</div>
-			        </div>
-			        <!-- Loop End -->
-		        </div>
+			        	<!-- Loop End -->
+		        	</div>
 
-		        <!-- Show More Button  -->
-		        <button id="showMoreBtn">Show More</button> <!-- Function will be applied to this button to load -->
-
+		        	<!-- Show More Button  -->
+		        	<button id="showMoreBtn" class="dinosaur-section__show-button button" >Show More</button> <!-- Function will be applied to this button to load -->
+				</div>
             </section>
 
             <!-- Chart section -->
-            <section>
-                <!-- Diet Chart  -->
-                <div id="chart_div">
-                    <img src="" alt="Pie Chart data of Diet Chart" />
+            <section class="chart-section">
+				<div class="container">
+                	<!-- Diet Chart  -->
+                	<div id="chart_div">
+                    	<img src="https://www.mindonmap.com/wp-content/uploads/2023/03/pie-chart-photo.jpg" class="chart-section__img" alt="Pie Chart data of Diet Chart" />
                     </div>
+				</div>
             </section>
         </main>
 

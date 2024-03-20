@@ -17,13 +17,20 @@ body {
 }
 
 .container{
-    padding: 0 120px;
+    padding: 100px 120px;
 }
 
 .button{
     padding: 32px 80px;
     border: 3px solid var(--secondary-brand-color);
     border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover{
+    background-color: var(--secondary-brand-color);
+    color: var(--secondary-color);
+    cursor: pointer;
 }
 
 
@@ -33,7 +40,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary-color-white); /* Light grey background */
-    padding: 10px 120px;
+    padding: 24px 120px;
     margin: 0;
     border-bottom: 1px solid var(--primary-color-dark);
 }
@@ -47,11 +54,13 @@ body {
     color:  var(--primary-color-dark); /* Dark grey color */
     margin-left: 20px; /* Space between links */
     font-size: 16px;
+    transition: all 0.3s ease-in-out;
 }
 
 .navbar-links a:hover {
     color: var(--secondary-brand-color); /* Change color on hover */
 }
+
 
 /* Hero section */
 .search-bar{
@@ -76,5 +85,58 @@ body {
 
 
 /* Cards section*/
+.dinosaur-section__cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 88px;
+    justify-content: space-between;
+
+}
+
+.dinosaur-section__card{
+    flex-basis: calc((100% - 264px)/4);
+    padding: 30px 24px;
+    background-color: var(--primary-color-dark);
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.dinosaur-section__card-img{
+    border-radius: 15px;
+    background-color: var(--primary-color-white);
+}
+
+.dinosaur-section__card-button{
+    padding: 12px 38px;
+    background-color: var(--primary-brand-color) ;
+    border: none;
+    border-radius: 15px;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+}
+
+.dinosaur-section__show-button{
+    display: block;
+    margin: 0 auto;
+}
+
 
 /* Chart section */
+.chart-section__img{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* Footer*/
+.footer{
+    text-align: center;
+    border-top: 1px solid var(--primary-color-dark);
+    padding: 24px 120px;
+}
