@@ -14,8 +14,8 @@
                     <img src="https://cdn-icons-png.flaticon.com/256/5559/5559218.png" alt="DinoWorld Logo"> <!-- Replace 'logo' with dino logo -->
                 </div>
                 <div class="navbar-links">
-                    <a href="list-of-dinos.html">List of Dinos</a>
-                    <a href="diet-chart.html">Diet Chart</a>
+                    <a href="#dinosaurs">List of Dinos</a>
+                    <a href="#chart">Diet Chart</a>
                     <a href="map.html">Map</a>
                 </div>
             </div>
@@ -23,16 +23,22 @@
 
 		<main>
             <!-- Hero section -->
-            <section>
-                <!-- Search Bar -->
-                <div class="search-bar">
-                    <input type="text" placeholder="Search..." class="search-input" />
-                    <button class="search-button button">Search</button>
-                </div>
+            <section class="hero-section">
+				<div class="container">
+					<div class="hero-section__text-block">
+						<h1>Dino World</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed felis enim. Mauris elit justo, pretium vestibulum dapibus sit amet, euismod quis leo. Pellentesque commodo semper leo rhoncus mattis. </p>
+						   <!-- Search Bar -->
+						<div class="search-bar">
+							<input type="text" placeholder="Search..." class="search-input" />
+							<button class="search-button button">Search</button>
+						</div>
+					</div>
+				</div>
             </section>
 
             <!-- Cards section -->
-            <section class="dinosaur-section">
+            <section class="dinosaur-section" id="dinosaurs">
 				<div class="container">
                		<!-- Cards -->
 		        	<div class="dinosaur-section__cards-container">
@@ -55,7 +61,7 @@
             </section>
 
             <!-- Chart section -->
-            <section class="chart-section">
+            <section class="chart-section" id="chart">
 				<div class="container">
                 	<!-- Diet Chart  -->
                 	<div id="chart_div">
