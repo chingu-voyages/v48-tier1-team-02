@@ -1,11 +1,64 @@
+:root {
+    --primary-color-white: #ffffff;
+    --primary-color-dark: #615D6C;
+    --primary-color-light: #d9d9d94d;
+    --secondary-color: #E0FBFC;
+    --primary-brand-color: #F86624;   
+    --secondary-brand-color: #4392F1; 
 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+}
+
+.container {
+    padding: 100px 120px;
+}
+
+h1 {
+    font-size: 100px;
+    color: var(--primary-brand-color);
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.button {
+    padding: 32px 80px;
+    border: 3px solid var(--secondary-brand-color);
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--secondary-brand-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+
+/* Header */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #153b50; /* Light grey background */
-    padding: 10px 20px;
+    background-color: transparent; /* Light grey background */
+    padding: 20px 120px;
     margin: 0;
+    border-bottom: 1px solid var(--secondary-color);
+
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
 }
 
 .logo img {
@@ -14,11 +67,111 @@
 
 .navbar-links a {
     text-decoration: none;
-    color: #e0fbfc; /* Dark grey color */
-    margin-left: 20px; /* Space between links */
+    color:  var(--secondary-color); /* Dark grey color */
+    margin-left: 60px; /* Space between links */
     font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    transition-duration: 10s;
 }
 
 .navbar-links a:hover {
-    color: #4392f1; /* Change color on hover */
+    color: var(--secondary-brand-color); /* Change color on hover */
+}
+
+
+/* Hero section */
+.hero-section {
+    background-image: url(../img/Hero-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section__text-block {
+    max-width: 480px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+}
+
+.search-bar {
+    display: flex;
+    gap: 0;
+    justify-content: center;
+}
+
+.search-input {
+    padding: 20px;
+    border: 1px solid var(--primary-color-dark);
+    border-radius: 15px 0 0 15px;
+    background-color: transparent;
+    width: 70%;
+}
+
+.search-button {
+    padding: 20px 40px;
+    border-radius: 0 15px 15px 0;
+}
+
+
+/* Cards section*/
+.dinosaur-section__cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 88px;
+    justify-content: space-between;
+}
+
+.dinosaur-section__card {
+    flex-basis: calc((100% - 264px)/4);
+    padding: 30px 24px;
+    background-color: var(--primary-color-dark);
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.dinosaur-section__card-img {
+    border-radius: 15px;
+    background-color: var(--primary-color-white);
+}
+
+.dinosaur-section__card-button {
+    padding: 12px 38px;
+    background-color: var(--primary-brand-color) ;
+    border: none;
+    border-radius: 15px;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+}
+
+.dinosaur-section__show-button {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Chart section */
+.chart-section__img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* Footer*/
+.footer {
+    text-align: center;
+    border-top: 1px solid var(--primary-color-dark);
+    padding: 20px 120px;
+    color: var(--secondary-brand-color);
 }

@@ -8,47 +8,68 @@
 	</head>
 	<body>
 		<!-- ** FLORIN ** Heading (wrap it inside of navbar or whatever you want) -->
-		<div class="navbar">
-			<div class="logo">
-				<img src="https://cdn-icons-png.flaticon.com/256/5559/5559218.png" alt="DinoWorld Logo"> <!-- Replace 'logo' with dino logo -->
-			</div>
-			<div class="navbar-links">
-				<a href="list-of-dinos.html">List of Dinos</a>
-				<a href="diet-chart.html">Diet Chart</a>
-				<a href="map.html">Map</a>
-			</div>
-		</div>
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="https://cdn-icons-png.flaticon.com/256/5559/5559218.png" alt="DinoWorld Logo"> <!-- Replace 'logo' with dino logo -->
+                </div>
+                <div class="navbar-links">
+                    <a href="#dinosaurs">List of Dinos</a>
+                    <a href="#chart">Diet Chart</a>
+                    <a href="dinosaurs around the world.html">Map</a>
+                </div>
+            </div>
+        </header>
 
-
-		<!-- Search Bar -->
-		<div class="search-bar">
-			<input type="text" placeholder="Search..." class="search-input" />
-			<button class="search-button">Search</button>
-		</div>
-
-		<!-- Cards -->
-		<div class="dinosaur-container">
-			<!-- Loop Start -->
-            <!-- Cards below will be loaded from the data with a loop -->
-			<div class="dinosaur-each">
-				<img src="" alt="Image Description" />
-				<div class="button-container">
-					<button>Show Details</button>
+		<main>
+            <!-- Hero section -->
+            <section class="hero-section">
+				<div class="container">
+					<div class="hero-section__text-block">
+						<h1>Dino World</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed felis enim. Mauris elit justo, pretium vestibulum dapibus sit amet, euismod quis leo. Pellentesque commodo semper leo rhoncus mattis. </p>
+						   <!-- Search Bar -->
+						<div class="search-bar">
+							<input type="text" placeholder="Search..." class="search-input" />
+							<button class="search-button button">Search</button>
+						</div>
+					</div>
 				</div>
-				<div class="details">
-					<p>Import Description Here and Hide when the button is clicked</p>
+            </section>
+
+            <!-- Cards section -->
+            <section class="dinosaur-section" id="dinosaurs">
+				<div class="container">
+               		<!-- Cards -->
+		        	<div class="dinosaur-section__cards-container">
+			        	<!-- Loop Start -->
+                    	<!-- Cards below will be loaded from the data with a loop -->
+			        	<div class="dinosaur-section__card">
+			        		<img src="https://cdn-icons-png.flaticon.com/256/5559/5559218.png"  class="dinosaur-section__card-img" alt="Image Description" />
+			        		<button class="dinosaur-section__card-button">Show Details</button>
+			        	
+			        		<div class="dinosaur-section__card-details">
+				        		<p>Import Description Here and Hide when the button is clicked</p>
+			        		</div>
+			        	</div>
+			        	<!-- Loop End -->
+		        	</div>
+
+		        	<!-- Show More Button  -->
+		        	<button id="showMoreBtn" class="dinosaur-section__show-button button" >Show More</button> <!-- Function will be applied to this button to load -->
 				</div>
-			</div>
-			<!-- Loop End -->
-		</div>
+            </section>
 
-		<!-- Show More Button  -->
-		<button id="showMoreBtn">Show More</button> <!-- Function will be applied to this button to load -->
-
-		<!-- Diet Chart  -->
-		<div id="chart_div">
-			<img src="" alt="Pie Chart data of Diet Chart" />
-		</div>
+            <!-- Chart section -->
+            <section class="chart-section" id="chart">
+				<div class="container">
+                	<!-- Diet Chart  -->
+                	<div id="chart_div">
+                    	<img src="Data Science Research/Dino Diet Chart/dino_diet_piechart.svg" class="chart-section__img" alt="Pie Chart data of Diet Chart" />
+                    </div>
+				</div>
+            </section>
+        </main>
 
 		<!-- Footer  -->
 		<footer class="footer">
