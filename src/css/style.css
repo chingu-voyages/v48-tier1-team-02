@@ -123,27 +123,39 @@ p {
 .dinosaur-section__cards-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 88px;
+    gap: 2rem;
     justify-content: space-between;
+    /* display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(4, 1fr); */
 }
 
 .dinosaur-section__card {
     flex-basis: calc((100% - 264px)/4);
+    min-width: 300px;
+    height: 420px;
     padding: 30px 24px;
     background-color: var(--primary-color-dark);
     border-radius: 15px;
-
+    
     display: flex;
     flex-direction: column;
     gap: 30px;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 100px;
+    overflow: hidden;
 }
 
 .dinosaur-section__card-img {
     border-radius: 15px;
     background-color: var(--primary-color-white);
+    width: 100%;
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    height: 200px;
 }
 
 .dinosaur-section__card-button {
