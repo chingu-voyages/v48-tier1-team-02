@@ -18,7 +18,7 @@ async function displayCards() {
 }
 
 function renderCards() {
-  // cardContainer.innerHTML = ''; // Clear existing cards
+  cardContainer.innerHTML = ''; // Clear existing cards
   cardsData.slice(0, visibleCards).forEach(card => {
     const cardElement = createCardElement(card);
     cardContainer.appendChild(cardElement);
