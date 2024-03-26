@@ -1,45 +1,50 @@
-const cardContainer = document.getElementById('cards-container');
-const showMoreButton = document.getElementById('showMoreBtn');
+const cardContainer = document.getElementById("cards-container");
+const showMoreButton = document.getElementById("showMoreBtn");
 let cardsData = [];
 let visibleCards = 20;
 let totalCards;
 
 async function fetchData() {
-  const response = await fetch('assets/json/dino.json');
-  const data = await response.json();
-  cardsData = data;
-  totalCards = cardsData.length;
+    const response = await fetch("assets/json/dino.json");
+    const data = await response.json();
+    cardsData = data;
+    totalCards = cardsData.length;
 }
 
 async function displayCards() {
-  await fetchData();
-  renderCards();
-  showMoreButton.addEventListener('click', loadMoreCards);
+    await fetchData();
+    renderCards();
+    showMoreButton.addEventListener("click", loadMoreCards);
 }
 
 function renderCards() {
-  cardContainer.innerHTML = ''; // Clear existing cards
-  cardsData.slice(0, visibleCards).forEach(card => {
-    const cardElement = createCardElement(card);
-    cardContainer.appendChild(cardElement);
-  });
-  toggleShowMoreButton();
+    cardContainer.innerHTML = ""; // Clear existing cards
+    cardsData.slice(0, visibleCards).forEach((card) => {
+        const cardElement = createCardElement(card);
+        cardContainer.appendChild(cardElement);
+    });
+    toggleShowMoreButton();
 }
 
 function createCardElement(card) {
-  const cardElement = document.createElement('div');
-  cardElement.classList.add('dinosaur-section__card');
-  const truncatedDescription = card.description.length > 150 ? card.description.substring(0, 150) + "..." : card.description;
-
-  cardElement.innerHTML = `
+    const cardElement = document.createElement("div");
+    cardElement.classList.add("dinosaur-section__card");
+    const truncatedDescription =
+        card.description.length > 150
+            ? card.description.substring(0, 150) + "..."
+            : card.description;
+    cardElement.innerHTML = `
+  <div class="dinosaur-section__card-item">
   <img
   src="${card.imageSrc}"
   class="dinosaur-section__card-img"
   alt="Image Description"
 />
-<button class="dinosaur-section__card-button">
-  Show Details
+<button class="dinosaur-section__card-button button">
+"${card.name}" 
+<i class="fa-sharp fa-regular fa-circle-play fa-rotate-90 arrow-icon" style="color: #e0fbfc;"></i>
 </button>
+</div>
 
 <div class="dinosaur-section__card-details">
   <p>
@@ -47,20 +52,20 @@ function createCardElement(card) {
   </p>
 </div>
   `;
-  return cardElement;
+    return cardElement;
 }
 
 function loadMoreCards() {
-  visibleCards += 8;
-  renderCards();
+    visibleCards += 8;
+    renderCards();
 }
 
 function toggleShowMoreButton() {
-  if (visibleCards >= totalCards) {
-    showMoreButton.style.display = 'none'; // Hide button when all cards are shown
-  } else {
-    showMoreButton.style.display = 'block';
-  }
+    if (visibleCards >= totalCards) {
+        showMoreButton.style.display = "none"; // Hide button when all cards are shown
+    } else {
+        showMoreButton.style.display = "block";
+    }
 }
 
 displayCards();
