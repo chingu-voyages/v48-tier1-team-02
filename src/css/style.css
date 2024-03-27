@@ -290,10 +290,17 @@ p {
 
 /* Map Script*/
 #mapscript {
-    margin-top: 100px;
+    margin-top: 70px;
     
 }
 /* Map NavBar*/
 .map-navbar{
     background-color: #615D6C;
+}
+
+
+/* Map Page Footer*/
+.map-footer {
+    background-color: white;
+    background-image: none;
 }
