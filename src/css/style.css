@@ -144,7 +144,8 @@ p {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 100px;
-    overflow: hidden;
+    overflow: auto;
+    scrollbar-width: none;
 }
 
 .dinosaur-section__card-img {
@@ -171,6 +172,16 @@ p {
     display: block;
     margin: 0 auto;
 }
+
+.dinosaur-section__card-details {
+    display: none;
+    overflow: auto;
+}
+
+.dinosaur-section__card-details--visible {
+    display: block;
+}
+
 
 
 /* Chart section */
