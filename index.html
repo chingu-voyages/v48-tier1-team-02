@@ -3,7 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/730cf48073.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Shalimar&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/css/style.css" />
+
     <title>Dino World</title>
   </head>
   <body>
@@ -11,10 +22,9 @@
     <header>
       <div class="navbar">
         <div class="logo">
-          <img
-            src="https://cdn-icons-png.flaticon.com/256/5559/5559218.png"
-            alt="DinoWorld Logo"
-          />
+          <a href="/">
+            <img src="src/img/Logo.png" alt="DinoWorld Logo" />
+          </a>
           <!-- Replace 'logo' with dino logo -->
         </div>
         <div class="navbar-links">
@@ -32,12 +42,18 @@
           <div class="hero-section__text-block">
             <h1>Dino World</h1>
             <p>
-              Welcome to DinoWorld! Click and dive into the past, exploring the amazing history of dinosaurs. Our search engine helps you find any dinosaur you can imagine. Let's journey together through time, discovering the marvels of prehistory! Join us and explore the secrets of these ancient creatures 
+              Welcome to DinoWorld! Click and dive into the past, exploring the
+              amazing history of dinosaurs. Our search engine helps you find any
+              dinosaur you can imagine. Let's journey together through time,
+              discovering the marvels of prehistory! Join us and explore the
+              secrets of these ancient creatures 
             </p>
             <!-- Search Bar -->
             <div class="search-bar">
               <input type="text" placeholder="Search..." class="search-input" />
-              <button class="search-button button">Search</button>
+              <button class="search-button button">
+                <img src="src/img/Search-btn.png" alt="Search" />
+              </button>
             </div>
           </div>
         </div>
@@ -71,7 +87,7 @@
 
           <!-- Show More Button  -->
           <button id="showMoreBtn" class="dinosaur-section__show-button button">
-            Show More
+            Show More...
           </button>
           <!-- Function will be applied to this button to load -->
         </div>
@@ -79,7 +95,7 @@
 
       <!-- Chart section -->
       <section class="chart-section" id="chart">
-        <div class="container">
+        <div class="container chart-section__container">
           <!-- Diet Chart  -->
           <div id="chart_div">
             <img
@@ -103,12 +119,16 @@
     <!-- Footer  -->
     <footer class="footer">
       <!-- Team repo name  -->
-      <p>
-        Check out our team's GitHub repository:
-        <a href="https://github.com/chingu-voyages/v48-tier1-team-02.git"
-          >Team GitHub Repo</a
+      <p>Check out our team's</p>
+      <div class="footer__link-block">
+        <i class="fa-brands fa-github footer__link-icon"></i>
+        <a
+          href="https://github.com/chingu-voyages/v48-tier1-team-02.git"
+          class="footer__link"
         >
-      </p>
+          GitHub repository
+        </a>
+      </div>
     </footer>
     <script src="src/js/app.js"></script>
   </body>

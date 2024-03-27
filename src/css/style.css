@@ -1,20 +1,37 @@
 :root {
     --primary-color-white: #ffffff;
-    --primary-color-dark: #615D6C;
-    --primary-color-light: #d9d9d94d;
-    --secondary-color: #E0FBFC;
-    --primary-brand-color: #F86624;   
-    --secondary-brand-color: #4392F1; 
+    --primary-color-dark: #153b50;
+    --primary-color-light: #615d6c;
+    --secondary-color: #e0fbfc;
+    --secondary-color-transparent: #e0fbfc73;
+    --primary-brand-color: #f86624;
+    --primary-brand-color-dark: #ba7146;
+    --secondary-brand-color: #4392f1;
+    --shadow-color: #615d6ca6;
+}
 
+.shalimar-regular {
+    font-family: "Shalimar", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
+    line-height: 1.5;
 }
 
 .container {
@@ -22,8 +39,10 @@ body {
 }
 
 h1 {
-    font-size: 100px;
-    color: var(--primary-brand-color);
+    font-family: "Shalimar", cursive;
+    font-size: 120px;
+    line-height: 0.8;
+    color: var(--primary-brand-color-dark);
     margin: 0;
 }
 
@@ -32,10 +51,13 @@ p {
 }
 
 .button {
-    padding: 32px 80px;
-    border: 3px solid var(--secondary-brand-color);
-    border-radius: 15px;
-    transition: all 0.3s ease-in-out;
+    padding: 12px;
+    border: 2px solid var(--secondary-brand-color);
+    background-color: var(--primary-brand-color);
+    border-radius: 20px;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
 }
 
 .button:hover {
@@ -44,40 +66,39 @@ p {
     cursor: pointer;
 }
 
-
 /* Header */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: transparent; /* Light grey background */
-    padding: 20px 120px;
+    padding: 0px 120px;
     margin: 0;
-    border-bottom: 1px solid var(--secondary-color);
+    border-bottom: 1px solid var(--primary-color-light);
+    height: 64px;
 
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     right: 0;
 }
 
 .logo img {
-    height: 50px; /* Adjust based on your logo's size */
+    height: 64px; /* Adjust based on your logo's size */
+    /*box-shadow: 2px 2px 5px var(--shadow-color);*/
 }
 
 .navbar-links a {
     text-decoration: none;
-    color:  var(--secondary-color); /* Dark grey color */
+    color: var(--secondary-color-transparent); /* Dark grey color */
     margin-left: 60px; /* Space between links */
     font-size: 16px;
-    transition: all 0.3s ease-in-out;
-    transition-duration: 10s;
+    transition: all 0.5s ease-in-out;
 }
 
 .navbar-links a:hover {
-    color: var(--secondary-brand-color); /* Change color on hover */
+    color: var(--primary-brand-color); /* Change color on hover */
 }
-
 
 /* Hero section */
 .hero-section {
@@ -95,82 +116,101 @@ p {
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    justify-content: center;
+    gap: 14px;
+    align-items: center;
+    padding-top: 64px;
 }
 
 .search-bar {
     display: flex;
     gap: 0;
     justify-content: center;
+    position: relative;
+    width: 80%;
 }
 
 .search-input {
-    padding: 20px;
-    border: 1px solid var(--primary-color-dark);
-    border-radius: 15px 0 0 15px;
+    padding: 10px 78px 10px 18px;
+    border: 1px solid var(--primary-color-light);
+    border-radius: 20px;
     background-color: transparent;
-    width: 70%;
+    width: 100%;
+    height: 44px;
+    font-size: 16px;
 }
 
 .search-button {
-    padding: 20px 40px;
-    border-radius: 0 15px 15px 0;
+    padding: 10px 18px;
+    border: 1px solid var(--primary-color-dark);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
 }
 
-
 /* Cards section*/
+.dinosaur-section {
+    background-image: url(../img/Cards-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .dinosaur-section__cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: space-between;
-    /* display: grid;
-    gap: 50px;
-    grid-template-columns: repeat(4, 1fr); */
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(254px, 1fr));
+    justify-items: center;
+    margin-bottom: 44px;
 }
 
 .dinosaur-section__card {
-    flex-basis: calc((100% - 264px)/4);
-    min-width: 300px;
-    height: 420px;
-    padding: 30px 24px;
-    background-color: var(--primary-color-dark);
-    border-radius: 15px;
-    
+    max-width: 278px;
+    padding: 12px 12px 38px;
+    background-color: var(--primary-color-light);
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px var(--shadow-color);
+
     display: flex;
     flex-direction: column;
     gap: 30px;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 100px;
+  
+    /*Umer's changes*/
     overflow: auto;
     scrollbar-width: none;
 }
 
+.dinosaur-section__card-item {
+    position: relative;
+}
+
 .dinosaur-section__card-img {
-    border-radius: 15px;
-    background-color: var(--primary-color-white);
     width: 100%;
-    background-position:center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    height: 270px;
+    border-radius: 20px;
+    background-color: var(--primary-color-white);
     object-fit: contain;
-    height: 200px;
 }
 
 .dinosaur-section__card-button {
-    padding: 12px 38px;
-    background-color: var(--primary-brand-color) ;
     border: none;
-    border-radius: 15px;
     color: var(--secondary-color);
-    text-transform: uppercase;
+    font-family: "Shalimar", cursive;
+    font-size: 28px;
+    line-height: 0.5;
+    text-transform: capitalize;
+
+    position: absolute;
+    bottom: -7%;
+    left: 6px;
+    right: 6px;
+    /* padding: 12px 0;*/
 }
 
-.dinosaur-section__show-button {
-    display: block;
-    margin: 0 auto;
+.arrow-icon {
+    font-size: 18px;
 }
 
 .dinosaur-section__card-details {
@@ -182,23 +222,71 @@ p {
     display: block;
 }
 
-
+.dinosaur-section__show-button {
+    display: block;
+    margin: 0 auto;
+    padding: 16px 44px;
+    background-color: transparent;
+}
 
 /* Chart section */
+.chart-section {
+    background-image: url(../img/Chart-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.chart-section__container {
+    padding-top: 0;
+}
+
 .chart-section__img {
     display: block;
     margin: 0 auto;
+    margin-bottom: 30px;
     width: 80%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px var(--shadow-color);
 }
 
 /* Footer*/
 .footer {
-    text-align: center;
     border-top: 1px solid var(--primary-color-dark);
     padding: 20px 120px;
     color: var(--secondary-brand-color);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    background-image: url(../img/Footer-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
+.footer__link-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.footer__link-icon {
+    font-size: 28px;
+}
+
+.footer__link {
+    color: var(--secondary-brand-color);
+    transition: all 0.5s ease-in-out;
+}
+
+.footer__link:hover {
+    color: var(--primary-brand-color);
+}
 
 /* Map Script*/
 #mapscript {
