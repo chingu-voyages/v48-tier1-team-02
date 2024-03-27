@@ -198,3 +198,14 @@ p {
     padding: 20px 120px;
     color: var(--secondary-brand-color);
 }
+
+
+/* Map Script*/
+#mapscript {
+    margin-top: 100px;
+    
+}
+/* Map NavBar*/
+.map-navbar{
+    background-color: #615D6C;
+}
