@@ -191,6 +191,11 @@ p {
     width: 80%;
 }
 
+#chart-img-1 {
+    width: 40%;
+    height: auto;
+}
+
 /* Footer*/
 .footer {
     text-align: center;
