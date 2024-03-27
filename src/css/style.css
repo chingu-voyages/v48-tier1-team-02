@@ -292,3 +292,13 @@ p {
 .footer__link:hover {
     color: var(--primary-brand-color);
 }
+
+/* Map Script*/
+#mapscript {
+    margin-top: 100px;
+    
+}
+/* Map NavBar*/
+.map-navbar{
+    background-color: #615D6C;
+}
