@@ -172,11 +172,14 @@ p {
     background-color: var(--primary-color-light);
     border-radius: 20px;
     box-shadow: 5px 5px 15px var(--shadow-color);
-    overflow: hidden;
 
     display: flex;
     flex-direction: column;
     gap: 30px;
+  
+    /*Umer's changes*/
+    overflow: auto;
+    scrollbar-width: none;
 }
 
 .dinosaur-section__card-item {
@@ -208,6 +211,15 @@ p {
 
 .arrow-icon {
     font-size: 18px;
+}
+
+.dinosaur-section__card-details {
+    display: none;
+    overflow: auto;
+}
+
+.dinosaur-section__card-details--visible {
+    display: block;
 }
 
 .dinosaur-section__show-button {
