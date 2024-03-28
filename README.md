@@ -23,7 +23,7 @@ Dinoworld is an adventure based discovery about the different types of dinosaurs
 
 > HTML File (index.html)
 
-  * Defines the structure of the webpage.
+*   Defines the structure of the webpage.
   * Includes links to external CSS and JavaScript files.
   * Contains elements such as header, main content, footer, and sections for hero, cards, and charts.
   * Includes placeholders for dynamic content such as card data.
