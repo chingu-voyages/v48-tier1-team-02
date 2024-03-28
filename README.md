@@ -4,7 +4,7 @@
 
 1. [Project Overview](#project-overview)
 2. [Key Features](#key-features)
-3.  
+3. [Web App Development](#web-app-development) 
 
 ## Project Overview 
 
@@ -12,15 +12,15 @@ Dinoworld is an adventure based discovery about the different types of dinosaurs
 
 ## Key Features
 
+* List of 100 dinosaurs with key characteristics and description.
+* A search bar for filtering out specific dinosaurs among the list.
+* A pie chart depicting the percentage of dinosaurs diet (herbivorous, carnivorous, omnivorous).
+* An interactive map page showcasing all the dinosaurs found in different countries, continents, and cities around the world.
+
+## Web App Development
 
 
 
-If you are unsure of what should go into the `readme` let this article,
-written by an experienced Chingu, be your starting point - 
-[Keys to a well written README](https://tinyurl.com/yk3wubft).
-
-And before we go there's "one more thing"! Once you decide what to include
-in your `readme` feel free to replace the text we've provided here.
 
 > Own it & Make it your Own!
 
