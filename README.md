@@ -79,8 +79,8 @@ Overall, I used a combination of Python libraries such as json, requests, pandas
 
 ## 4. Developers
 
-* Voyage Guide: ksenia Riabova
-* Web Developers: Sharaf Anees, Nadiia Lashtun, Umer khokhar, Florin Rosoga
+* Voyage Guide: `ksenia Riabova`
+* Web Developers: `Sharaf Anees`, `Nadiia Lashtun`, `Umer khokhar`, `Florin Rosoga`
 * Data Scientist: `Ahmed Sohail`
 
 
