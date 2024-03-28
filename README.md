@@ -19,12 +19,10 @@ Dinoworld is an adventure based discovery about the different types of dinosaurs
 
 ## Web App Development
 
-### 1. `Tech Stack`
-
-[**HTML**](#html)
+[`**HTML**`](#html)
 
 
-`CSS`
+[**`CSS`**](#css)
 
 
 **JavaScript**
