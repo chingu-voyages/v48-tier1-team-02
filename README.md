@@ -14,10 +14,12 @@ Dinoworld is an adventure based discovery about the different types of dinosaurs
 
 ## 2. Key Features
 
-* List of 100 dinosaurs with key characteristics and description.
-* A search bar for filtering out specific dinosaurs among the list.
+* List of 75 dinosaurs with key characteristics and description.
+* A search bar for filtering out dinosaurs by name among the list.
 * A pie chart depicting the percentage of dinosaurs diet (herbivorous, carnivorous, omnivorous).
+* A bar chart highlighting how tall the dinosaurs are against each other.
 * An interactive map page showcasing all the dinosaurs found in different countries, continents, and cities around the world.
+* Responsiveness and user-friendly across all devices.
 
 ## 3. Web App Development
 
@@ -61,7 +63,7 @@ Dinoworld is an adventure based discovery about the different types of dinosaurs
   - Creating interactive prototypes to demonstrate the functionality and flow of the webpage, including transitions between different states and screens.
 - **Collaboration:**
   
-  - Allowing team members, including designers, developers, and stakeholders, to collaborate on the design project, provide feedback, and iterate on the design until it meets the project requirements.
+  - Allowing team members, including designers, developers, and data scientists, to collaborate on the design project, provide feedback, and iterate on the design until it meets the project requirements.
 
 Each file contributes to different aspects of the webpage, collectively creating the user interface, functionality, and visual design. Overall, Figma serves as a comprehensive tool for designing, prototyping, and collaborating on digital projects, making it a valuable asset in the development process of websites and applications.
 
@@ -71,15 +73,15 @@ Each file contributes to different aspects of the webpage, collectively creating
   
   - Retrieved dinosaur data from a `dino.json` file hosted on GitHub using the requests library to fetch the data and then parsed it using the json module.
   - Utilized matplotlib to create a pie chart visualizing the distribution of dinosaur diets among different categories.
-  - Used `plotly.express` to generate a scatter map showing the geographical distribution of dinosaur findings around the world. `geopy` was employed to obtain latitude and longitude coordinates for countries listed in the dataset.
+  - The team used `plotly.express` to generate a scatter map showing the geographical distribution of dinosaur findings around the world. `geopy` was employed to obtain latitude and longitude coordinates for countries listed in the dataset.
   - Employed `matplotlib` to create a horizontal bar chart illustrating the lengths of dinosaurs categorized by species.
     
-Overall, I used a combination of Python libraries such as json, requests, pandas, numpy, matplotlib, seaborn, plotly.express, and geopy to load data, create visualizations (pie chart, map, and bar chart), and handle geographical data in the dino dataset.
+Overall, the team used a combination of Python libraries such as json, requests, pandas, numpy, matplotlib, seaborn, plotly.express, and geopy to load data, create visualizations (pie chart, map, and bar chart), and handle geographical data in the dino dataset.
 
 
 ## 4. Developers
 
-* Voyage Guide: `ksenia Riabova`
+* Voyage Guide: `Ksenia Riabova`
 * Web Developers: `Sharaf Anees`, `Nadiia Lashtun`, `Umer khokhar`, `Florin Rosoga`
 * Data Scientist: `Ahmed Sohail`
 
