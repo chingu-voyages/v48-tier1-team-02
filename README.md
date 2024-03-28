@@ -22,6 +22,7 @@ Dinoworld is an adventure based discovery about the different types of dinosaurs
 ### [HTML](#html)
 
 - **HTML File (index.html)**
+  
   - Defines the structure of the webpage.
   - Includes links to external CSS and JavaScript files.
   - Contains elements such as header, main content, footer, and sections for hero, cards, and charts.
@@ -29,7 +30,8 @@ Dinoworld is an adventure based discovery about the different types of dinosaurs
 
 ### [CSS](#css)
 
-- CSS File (style.css)
+- **CSS File (style.css)**
+  
   - Defines the visual appearance of the webpage.
   - Includes styles for various sections such as header, hero section, card section, chart section, and footer.
   - Sets colors, fonts, layouts, and other visual properties.
@@ -38,7 +40,8 @@ Dinoworld is an adventure based discovery about the different types of dinosaurs
 
 ### [JavaScript](#javascript)
 
-> JavaScript File (app.js)
+- **JavaScript File (app.js)**
+  
   - Fetches data from a JSON file asynchronously (fetchData() function).
   - Dynamically renders cards based on the fetched data (displayCards() function).
   - Implements a "show more" functionality for the cards (loadMoreCards() function).
@@ -48,7 +51,11 @@ Dinoworld is an adventure based discovery about the different types of dinosaurs
 
 ### [Figma](#figma)
 
-Each file contributes to different aspects of the webpage, collectively creating the user interface, functionality, and visual design.
+- UI Design: Designing the user interface elements such as headers, navigation bars, cards, buttons, etc., as well as defining the overall layout and visual style of the webpage.
+- Prototyping: Creating interactive prototypes to demonstrate the functionality and flow of the webpage, including transitions between different states and screens.
+- Collaboration: Allowing team members, including designers, developers, and stakeholders, to collaborate on the design project, provide feedback, and iterate on the design until it meets the project requirements.
+
+Each file contributes to different aspects of the webpage, collectively creating the user interface, functionality, and visual design. Overall, Figma serves as a comprehensive tool for designing, prototyping, and collaborating on digital projects, making it a valuable asset in the development process of websites and applications.
 
 ### [Python](#python)
 
