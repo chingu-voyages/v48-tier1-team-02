@@ -65,8 +65,14 @@ Each file contributes to different aspects of the webpage, collectively creating
 
 ### [Python](#python)
 
-
-
+- **Python File (dinoworld.ipynb)**
+  
+  - Retrieved dinosaur data from a `dino.json` file hosted on GitHub using the requests library to fetch the data and then parsed it using the json module.
+  - Utilized matplotlib to create a pie chart visualizing the distribution of dinosaur diets among different categories.
+  - Used `plotly.express` to generate a scatter map showing the geographical distribution of dinosaur findings around the world. `geopy` was employed to obtain latitude and longitude coordinates for countries listed in the dataset.
+  - Employed `matplotlib` to create a horizontal bar chart illustrating the lengths of dinosaurs categorized by species.
+    
+Overall, I used a combination of Python libraries such as json, requests, pandas, numpy, matplotlib, seaborn, plotly.express, and geopy to load data, create visualizations (pie chart, map, and bar chart), and handle geographical data in the dino dataset.
 
 
 ## Team Documents
