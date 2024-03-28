@@ -4,20 +4,22 @@
 
 1. [Project Overview](#project-overview)
 2. [Key Features](#key-features)
-3. [Web App Development](#web-app-development) 
+3. [Web App Development](#web-app-development)
+4. Contributors
+5. Our Team
 
-## Project Overview 
+## 1. Project Overview 
 
 Dinoworld is an adventure based discovery about the different types of dinosaurs that have existed around the globe highlighting the characteristics of each individual dinosaurs along with the types of diet and what percentage of them eat based on their species. This webapp provides a great **all-in-one** learning tool for people of all ages and develops the knowledge and history you need to know about the dinosaurs.
 
-## Key Features
+## 2. Key Features
 
 * List of 100 dinosaurs with key characteristics and description.
 * A search bar for filtering out specific dinosaurs among the list.
 * A pie chart depicting the percentage of dinosaurs diet (herbivorous, carnivorous, omnivorous).
 * An interactive map page showcasing all the dinosaurs found in different countries, continents, and cities around the world.
 
-## Web App Development
+## 3. Web App Development
 
 ### [HTML](#html)
 
@@ -65,7 +67,7 @@ Each file contributes to different aspects of the webpage, collectively creating
 
 ### [Python](#python)
 
-- **Python File (dinoworld.ipynb)**
+- **Python File [Dino World](https://colab.research.google.com/drive/1WcM7p9ZDD7eE8Wi-FAVxHrIKSYvq9bgN#scrollTo=UDvBXkK2LbE4)**
   
   - Retrieved dinosaur data from a `dino.json` file hosted on GitHub using the requests library to fetch the data and then parsed it using the json module.
   - Utilized matplotlib to create a pie chart visualizing the distribution of dinosaur diets among different categories.
@@ -75,26 +77,11 @@ Each file contributes to different aspects of the webpage, collectively creating
 Overall, I used a combination of Python libraries such as json, requests, pandas, numpy, matplotlib, seaborn, plotly.express, and geopy to load data, create visualizations (pie chart, map, and bar chart), and handle geographical data in the dino dataset.
 
 
-## Team Documents
+## 4. Contributors
 
-You may find these helpful as you work together to organize your project.
 
-- [Team Project Ideas](./docs/team_project_ideas.md)
-- [Team Decision Log](./docs/team_decision_log.md)
 
-Meeting Agenda templates (located in the `/docs` directory in this repo):
-
-- Meeting - Voyage Kickoff --> ./docs/meeting-voyage_kickoff.docx
-- Meeting - App Vision & Feature Planning --> ./docs/meeting-vision_and_feature_planning.docx
-- Meeting - Sprint Retrospective, Review, and Planning --> ./docs/meeting-sprint_retrospective_review_and_planning.docx
-- Meeting - Sprint Open Topic Session --> ./docs/meeting-sprint_open_topic_session.docx
-
-## Our Team
-
-Everyone on your team should add their name along with a link to their GitHub
-& optionally their LinkedIn profiles below. Do this in Sprint #1 to validate
-your repo access and to practice PR'ing with your team *before* you start
-coding!
+## 5. Our Team
 
 - Ahmed Sohail: [GitHub](https://github.com/Ahmed-Sohail2000) / [LinkedIn](https://www.linkedin.com/in/ahmed-sohail/)
 - Sharaf Anees: [GitHub](https://github.com/sharafcs50) / [LinkedIn](https://www.linkedin.com/in/sharafrica/)
