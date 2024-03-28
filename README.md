@@ -52,10 +52,13 @@ Dinoworld is an adventure based discovery about the different types of dinosaurs
 ### [Figma](#figma)
 
 - **UI Design:**
+  
   - Designing the user interface elements such as headers, navigation bars, cards, buttons, etc., as well as defining the overall layout and visual style of the webpage.
 - **Prototyping:**
+  
   - Creating interactive prototypes to demonstrate the functionality and flow of the webpage, including transitions between different states and screens.
 - **Collaboration:**
+  
   - Allowing team members, including designers, developers, and stakeholders, to collaborate on the design project, provide feedback, and iterate on the design until it meets the project requirements.
 
 Each file contributes to different aspects of the webpage, collectively creating the user interface, functionality, and visual design. Overall, Figma serves as a comprehensive tool for designing, prototyping, and collaborating on digital projects, making it a valuable asset in the development process of websites and applications.
