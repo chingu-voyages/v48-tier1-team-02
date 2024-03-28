@@ -21,7 +21,7 @@ Dinoworld is an adventure based discovery about the different types of dinosaurs
 
 ### [HTML](#html)
 
-> HTML File (index.html)
+- **HTML File (index.html)**
   - Defines the structure of the webpage.
   - Includes links to external CSS and JavaScript files.
   - Contains elements such as header, main content, footer, and sections for hero, cards, and charts.
@@ -29,7 +29,7 @@ Dinoworld is an adventure based discovery about the different types of dinosaurs
 
 ### [CSS](#css)
 
-> CSS File (style.css)
+- CSS File (style.css)
   - Defines the visual appearance of the webpage.
   - Includes styles for various sections such as header, hero section, card section, chart section, and footer.
   - Sets colors, fonts, layouts, and other visual properties.
