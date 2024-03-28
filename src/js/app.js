@@ -1,5 +1,7 @@
 const cardContainer = document.getElementById('cards-container');
 const showMoreButton = document.getElementById('showMoreBtn');
+const searchInput = document.getElementById('searchInput');
+const searchBtn = document.getElementById('searchBtn');
 let cardsData = [];
 let visibleCards = 20;
 let totalCards;
@@ -15,16 +17,27 @@ async function displayCards() {
   await fetchData();
   renderCards();
   showMoreButton.addEventListener('click', loadMoreCards);
+  searchInput.addEventListener('input', handleSearch);
+  // searchBtn.addEventListener('click', searchBtnClick);
 }
 
-function renderCards() {
-  // cardContainer.innerHTML = ''; // Clear existing cards
-  cardsData.slice(0, visibleCards).forEach(card => {
-    const cardElement = createCardElement(card);
-    cardContainer.appendChild(cardElement);
-  });
+function renderCards(filteredData) {
+  cardContainer.innerHTML = ''; // Clear existing cards
+  const dataToRender = filteredData || cardsData;
+  
+  if (dataToRender.length === 0) {
+    const noResultsMessage = document.createElement('p');
+    noResultsMessage.textContent = 'No dinosaurs found matching your search.';
+    cardContainer.appendChild(noResultsMessage);
+  } else {
+    dataToRender.slice(0, visibleCards).forEach(card => {
+      const cardElement = createCardElement(card);
+      cardContainer.appendChild(cardElement);
+    });
+  }
   toggleShowMoreButton();
 }
+
 
 function createCardElement(card) {
   const cardElement = document.createElement('div');
@@ -71,15 +84,6 @@ function createCardElement(card) {
 }
 
 
-
-// document.addEventListener('click', (e) => {
-//   let target = e.target;
-//   if(target.classList.contains('dinosaur-section__card-button')) {
-//     const cardDetailsDiv = target.parentNode.querySelector('.dinosaur-section__card-details');
-//     cardDetailsDiv.classList.toggle('dinosaur-section__card-details--visible');
-//   }
-// })
-
 function loadMoreCards() {
   visibleCards += 8;
   renderCards();
@@ -93,4 +97,22 @@ function toggleShowMoreButton() {
   }
 }
 
+
+function handleSearch() {
+  const searchTerm = searchInput.value.toLowerCase();
+  const filteredCards = cardsData.filter(card => card.name.toLowerCase().startsWith(searchTerm));
+  renderCards(filteredCards);
+}
+
+// function searchBtnClick() {
+//   handleSearch();
+//   window.location.hash = '#dinosaurs';
+// }
 displayCards();
+
+searchBtn.addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent default behavior of the search button click
+  handleSearch();
+  // Redirect to the section containing dinosaurs
+  window.location.hash = '#dinosaurs';
+});
