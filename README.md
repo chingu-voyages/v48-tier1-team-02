@@ -6,11 +6,14 @@
 2. [Key Features](#key-features)
 3.  
 
+## Project Overview 
+
+Dinoworld is an adventure based discovery about the different types of dinosaurs that have existed around the globe highlighting the characteristics of each individual dinosaurs along with the types of diet and what percentage of them eat based on their species. This webapp provides a great **all-in-one** learning tool for people of all ages and develops the knowledge and history you need to know about the dinosaurs.
+
+## Key Features
 
 
-Your project's `readme` is as important to success as your code. For 
-this reason you should put as much care into its creation and maintenance
-as you would any other component of the application.
+
 
 If you are unsure of what should go into the `readme` let this article,
 written by an experienced Chingu, be your starting point - 
