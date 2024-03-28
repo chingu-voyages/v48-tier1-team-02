@@ -21,17 +21,39 @@ Dinoworld is an adventure based discovery about the different types of dinosaurs
 
 ### [HTML](#html)
 
+> HTML File (index.html)
 
-[**`CSS`**](#css)
+Defines the structure of the webpage.
+Includes links to external CSS and JavaScript files.
+Contains elements such as header, main content, footer, and sections for hero, cards, and charts.
+Includes placeholders for dynamic content such as card data.
 
+### [CSS](#css)
 
-**JavaScript**
+> CSS File (style.css)
 
+Defines the visual appearance of the webpage.
+Includes styles for various sections such as header, hero section, card section, chart section, and footer.
+Sets colors, fonts, layouts, and other visual properties.
+Implements responsive design using media queries (@media rules).
+Defines animations or transitions for interactive elements.
 
-**Figma**
+### [JavaScript](#javascript)
 
+> JavaScript File (app.js)
 
-**Python**
+Fetches data from a JSON file asynchronously (fetchData() function).
+Dynamically renders cards based on the fetched data (displayCards() function).
+Implements a "show more" functionality for the cards (loadMoreCards() function).
+Toggles the visibility of the "Show More" button based on the number of cards displayed (toggleShowMoreButton() function).
+Creates HTML elements for each card based on the provided data (createCardElement(card) function).
+Implements event listeners for toggling card details visibility and loading more cards.
+
+### [Figma](#figma)
+
+Each file contributes to different aspects of the webpage, collectively creating the user interface, functionality, and visual design.
+
+### [Python](#python)
 
 
 
