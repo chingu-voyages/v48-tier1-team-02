@@ -5,8 +5,8 @@
 1. [Project Overview](#project-overview)
 2. [Key Features](#key-features)
 3. [Web App Development](#web-app-development)
-4. Contributors
-5. Our Team
+4. [Developers](#deverlopers)
+5. [Our Team](#our-team)
 
 ## 1. Project Overview 
 
@@ -77,8 +77,11 @@ Each file contributes to different aspects of the webpage, collectively creating
 Overall, I used a combination of Python libraries such as json, requests, pandas, numpy, matplotlib, seaborn, plotly.express, and geopy to load data, create visualizations (pie chart, map, and bar chart), and handle geographical data in the dino dataset.
 
 
-## 4. Contributors
+## 4. Developers
 
+* Voyage Guide: ksenia Riabova
+* Web Developers: Sharaf Anees, Nadiia Lashtun, Umer khokhar, Florin Rosoga
+* Data Scientist: `Ahmed Sohail`
 
 
 ## 5. Our Team
