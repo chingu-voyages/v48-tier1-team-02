@@ -63,12 +63,6 @@ function renderCards(filteredData) {
 function createCardElement(card) {
   const cardElement = document.createElement("div");
   cardElement.classList.add("dinosaur-section__card");
-  let truncatedDescription =
-    card.description.length > 150
-      ? card.description.substring(0, 150) + "..."
-      : card.description;
-  const cardElement = document.createElement("div");
-  cardElement.classList.add("dinosaur-section__card");
   // Checking if the card has description or not (and keeping des shorter)
   let truncatedDescription =
     card.description.length > 150
@@ -90,6 +84,7 @@ function createCardElement(card) {
     <p><strong>Type Species: </strong>${card.typeSpecies}</p>
     <p>${truncatedDescription}</p>
   `;
+
   // Adding card Info
   cardElement.innerHTML += `
   <div class="dinosaur-section__card-item">
