@@ -20,19 +20,23 @@
   <body>
     <!-- ** FLORIN ** Heading (wrap it inside of navbar or whatever you want) -->
     <header>
-      <div class="navbar">
-        <div class="logo">
-          <a href="/">
-            <img src="src/img/Logo.png" alt="DinoWorld Logo" />
-          </a>
-          <!-- Replace 'logo' with dino logo -->
+      <nav class="navbar">
+        <div class="navbar__mobile-menu">
+          <div class="logo">
+            <a href="/">
+              <img src="src/img/Logo.png" alt="DinoWorld Logo" />
+            </a>
+          </div>
+          <button type="button" class="navbar__mobile-menu-button">
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </div>
-        <div class="navbar-links">
+        <div class="navbar__links">
           <a href="#dinosaurs">List of Dinos</a>
           <a href="#chart">Charts</a>
           <a href="dinosaurs around the world.html">Map</a>
         </div>
-      </div>
+      </nav>
     </header>
 
     <main>
@@ -41,12 +45,12 @@
         <div class="container">
           <div class="hero-section__text-block">
             <h1>Dino World</h1>
-            <p>
+            <p class="hero-section__text-block-welcome-text">
               Welcome to DinoWorld! Click and dive into the past, exploring the
               amazing history of dinosaurs. Our search engine helps you find any
-              dinosaur you can imagine. Let's journey together through time,
+              dinosaur you can imagine. Let's journey together!<!-- through time,
               discovering the marvels of prehistory! Join us and explore the
-              secrets of these ancient creatures 
+              secrets of these ancient creatures -->
             </p>
             <!-- Search Bar -->
             <div class="search-bar">
