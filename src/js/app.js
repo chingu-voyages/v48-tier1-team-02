@@ -1,10 +1,17 @@
+// Get references to HTML elements
+
 const cardContainer = document.getElementById("cards-container");
 const showMoreButton = document.getElementById("showMoreBtn");
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
+let mobileMenuBtn = document.querySelector(".navbar__mobile-menu-button");
+
+// Initialize the variables
 let cardsData = [];
 let visibleCards = 20;
 let totalCards;
-let mobileMenuBtn = document.querySelector(".navbar__mobile-menu-button");
 
+// Function to fetch Cards data
 async function fetchData() {
   const response = await fetch("assets/json/dino.json");
   const data = await response.json();
@@ -12,24 +19,57 @@ async function fetchData() {
   totalCards = cardsData.length;
 }
 
+// Event listener on searchBtn
+searchBtn.addEventListener("click", () => {
+  handleSearch();
+  searchBtn.innerText = "";
+  window.location.href = "#dinosaurs";
+});
+
+// Function to display cards
 async function displayCards() {
   await fetchData();
   renderCards();
   showMoreButton.addEventListener("click", loadMoreCards);
+  // Event listener on searchInput
+  searchInput.addEventListener("keyup", (e) => {
+    // Checking if Enter key is pressed
+    if (e.key === "Enter") {
+      handleSearch();
+    }
+    // Calling the showSearchSuggestions function to show suggestions
+    showSearchSuggestions(searchInput.value.toLowerCase());
+  });
 }
 
-function renderCards() {
-  cardContainer.innerHTML = ""; // Clear existing cards
-  cardsData.slice(0, visibleCards).forEach((card) => {
-    const cardElement = createCardElement(card);
-    cardContainer.appendChild(cardElement);
-  });
+// Function to renderCards on the page
+function renderCards(filteredData) {
+  cardContainer.innerHTML = "";
+  const dataToRender = filteredData || cardsData;
+  // if No result found (diaplaying message)
+  if (dataToRender.length === 0) {
+    cardContainer.innerHTML = `<h2>No results found for <span>${searchInput.value}</span></h2>`;
+  } else {
+    // if result found (displaying cards)
+    dataToRender.slice(0, visibleCards).forEach((card) => {
+      const cardElement = createCardElement(card);
+      cardContainer.appendChild(cardElement);
+    });
+  }
   toggleShowMoreButton();
 }
 
+// Function to create card
 function createCardElement(card) {
   const cardElement = document.createElement("div");
   cardElement.classList.add("dinosaur-section__card");
+  let truncatedDescription =
+    card.description.length > 150
+      ? card.description.substring(0, 150) + "..."
+      : card.description;
+  const cardElement = document.createElement("div");
+  cardElement.classList.add("dinosaur-section__card");
+  // Checking if the card has description or not (and keeping des shorter)
   let truncatedDescription =
     card.description.length > 150
       ? card.description.substring(0, 150) + "..."
@@ -40,6 +80,7 @@ function createCardElement(card) {
   // Card Details Container here
   const cardDetailsDiv = document.createElement("div");
   cardDetailsDiv.classList.add("dinosaur-section__card-details");
+  // Adding card details
   cardDetailsDiv.innerHTML = `
     <p><strong>Type: </strong>${card.typeOfDinosaur}</p>
     <p><strong>Length: </strong>${card.length}m</p>
@@ -49,8 +90,7 @@ function createCardElement(card) {
     <p><strong>Type Species: </strong>${card.typeSpecies}</p>
     <p>${truncatedDescription}</p>
   `;
-  // cardDetailsDiv.style.display = 'none';
-
+  // Adding card Info
   cardElement.innerHTML += `
   <div class="dinosaur-section__card-item">
   <img
@@ -64,39 +104,74 @@ function createCardElement(card) {
   </button>
   </div>
   `;
-
   cardElement.appendChild(cardDetailsDiv);
+  // Show more button
   const button = cardElement.querySelector(".dinosaur-section__card-button");
   button.addEventListener("click", () => {
-    // cardDetailsDiv.classList.remove('dinosaur-section__card-details');
-
+    // Toggle the Card Details
     cardDetailsDiv.classList.toggle("dinosaur-section__card-details--visible");
-    // button.classList.toggle('dinosaur-section__card-button--active');
     console.log("clicked");
   });
 
   return cardElement;
 }
 
-// document.addEventListener('click', (e) => {
-//   let target = e.target;
-//   if(target.classList.contains('dinosaur-section__card-button')) {
-//     const cardDetailsDiv = target.parentNode.querySelector('.dinosaur-section__card-details');
-//     cardDetailsDiv.classList.toggle('dinosaur-section__card-details--visible');
-//   }
-// })
-
+// Load more Cards function
 function loadMoreCards() {
   visibleCards += 8;
   renderCards();
 }
 
+// Toggle Show More Button
 function toggleShowMoreButton() {
   if (visibleCards >= totalCards) {
-    showMoreButton.style.display = "none"; // Hide button when all cards are shown
+    showMoreButton.style.display = "none";
   } else {
     showMoreButton.style.display = "block";
   }
+}
+
+// Handle Search Function
+function handleSearch() {
+  const searchTerm = searchInput.value.toLowerCase();
+  // Filter cardsData based on search
+  const filteredData = cardsData.filter((card) => {
+    return card.name.toLowerCase().startsWith(searchTerm);
+  });
+
+  // Render filtered cards
+  renderCards(filteredData);
+  // Scroll to dinosaurs section
+  window.location.href = "#dinosaurs";
+  // hidding search suggestions
+  const SuggestionsDiv = document.getElementById("suggestionContainer");
+  SuggestionsDiv.style.display = "none";
+}
+
+// Show Search Suggestion function
+function showSearchSuggestions(searchTerm) {
+  const searchSuggestionsDiv = document.getElementById("suggestionContainer");
+
+  // Filtering the suggestions based on search
+  const suggestions = cardsData.filter((card) =>
+    card.name.toLowerCase().startsWith(searchTerm)
+  );
+  searchSuggestionsDiv.innerHTML = "";
+  // Creating div for each suggestion
+  suggestions.forEach((suggestion) => {
+    const suggestionElement = document.createElement("div");
+    suggestionElement.textContent = suggestion.name;
+    suggestionElement.classList.add("search-suggestions");
+    // Event listener on suggestion
+    suggestionElement.addEventListener("click", () => {
+      searchInput.value = suggestion.name;
+      searchSuggestionsDiv.style.display = "none";
+    });
+    searchSuggestionsDiv.appendChild(suggestionElement);
+  });
+  // Showing suggestions
+  searchSuggestionsDiv.style.display =
+    suggestions.length > 0 ? "block" : "none";
 }
 
 /*Open/close mobile menu*/
@@ -110,5 +185,6 @@ function showMobileMenu() {
   }
 }
 
+// Display Cards
 displayCards();
 mobileMenuBtn.addEventListener("click", showMobileMenu);

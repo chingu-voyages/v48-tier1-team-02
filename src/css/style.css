@@ -179,6 +179,28 @@ p {
     align-items: center;
 }
 
+#suggestionContainer {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+}
+#suggestionContainer:hover {
+    color: black !important;
+}
+.search-suggestions {
+    color: black !important;
+    padding: 10px;
+    cursor: pointer;
+}
+
 /* Cards section*/
 .dinosaur-section {
     background-image: url(../img/Cards-background.jpg);
@@ -249,6 +271,12 @@ p {
 .dinosaur-section__card-details--visible {
     display: block;
 }
+#cards-container {
+    font-size: 1.5rem;
+}
+#cards-container h2 span {
+    color: var(--primary-brand-color);
+}
 
 .dinosaur-section__show-button {
     display: block;
@@ -256,6 +284,7 @@ p {
     padding: 16px 44px;
     background-color: transparent;
 }
+
 
 /* Chart section */
 .chart-section {
