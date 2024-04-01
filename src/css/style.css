@@ -95,15 +95,19 @@ p {
     /*box-shadow: 2px 2px 5px var(--shadow-color);*/
 }
 
-.navbar__links a {
+.navbar__links {
+    display: flex;
+    gap: 60px; /* Space between links */
+}
+
+.navbar__links-item {
     text-decoration: none;
     color: var(--secondary-color-transparent); /* Dark grey color */
-    margin-left: 60px; /* Space between links */
     font-size: 16px;
     transition: all 0.5s ease-in-out;
 }
 
-.navbar__links a:hover {
+.navbar__links-item:hover {
     color: var(--primary-brand-color); /* Change color on hover */
 }
 
@@ -425,9 +429,10 @@ p {
         justify-content: center;
         background-color: var(--shadow-color);
         width: 100%;
+        gap: 0px;
     }
 
-    .navbar__links a {
+    .navbar__links-item {
         margin: 20px 0;
     }
 

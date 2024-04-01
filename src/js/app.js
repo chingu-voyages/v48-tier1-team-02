@@ -172,11 +172,18 @@ function showSearchSuggestions(searchTerm) {
 /*Open/close mobile menu*/
 function showMobileMenu() {
   let navLinks = document.querySelector(".navbar__links");
+  let linkItems = document.querySelectorAll(".navbar__links-item");
 
+  //Open mobile menu and change icon
   if (navLinks.classList.toggle("is-open")) {
-    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>'; //Close
   } else {
     mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+  }
+
+  //Close navmenu if one of the link clicked
+  for (link of linkItems) {
+    link.addEventListener("click", showMobileMenu);
   }
 }
 
