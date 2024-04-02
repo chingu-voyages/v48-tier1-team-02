@@ -83,21 +83,53 @@ p {
     right: 0;
 }
 
+.logo {
+    height: 64px;
+    display: flex;
+    align-items: center;
+}
+
 .logo img {
-    height: 64px; /* Adjust based on your logo's size */
+    max-width: 64px; /* Adjust based on your logo's size */
+    vertical-align: bottom;
     /*box-shadow: 2px 2px 5px var(--shadow-color);*/
 }
 
-.navbar-links a {
+.navbar__links {
+    display: flex;
+    gap: 60px; /* Space between links */
+}
+
+.navbar__links-item {
     text-decoration: none;
     color: var(--secondary-color-transparent); /* Dark grey color */
-    margin-left: 60px; /* Space between links */
     font-size: 16px;
     transition: all 0.5s ease-in-out;
 }
 
-.navbar-links a:hover {
+.navbar__links-item:hover {
     color: var(--primary-brand-color); /* Change color on hover */
+}
+
+.navbar__mobile-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__mobile-menu-button {
+    display: none;
+    max-width: 46px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--secondary-color-transparent);
+}
+
+.navbar__mobile-menu-button:hover {
+    cursor: pointer;
+    color: var(--primary-brand-color);
 }
 
 /* Hero section */
@@ -112,7 +144,7 @@ p {
 }
 
 .hero-section__text-block {
-    max-width: 480px;
+    max-width: 420px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -183,8 +215,8 @@ p {
 .dinosaur-section__cards-container {
     display: grid;
     gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(254px, 1fr));
-    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(254px, 1fr));
+    justify-items: center; /* Place cards container in the center of the page */
     margin-bottom: 44px;
 }
 
@@ -198,7 +230,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 30px;
-  
+
     /*Umer's changes*/
     overflow: auto;
     scrollbar-width: none;
@@ -206,6 +238,7 @@ p {
 
 .dinosaur-section__card-item {
     position: relative;
+    width: 240px;
 }
 
 .dinosaur-section__card-img {
@@ -228,7 +261,6 @@ p {
     bottom: -7%;
     left: 6px;
     right: 6px;
-    /* padding: 12px 0;*/
 }
 
 .arrow-icon {
@@ -257,7 +289,6 @@ p {
     background-color: transparent;
 }
 
-
 /* Chart section */
 .chart-section {
     background-image: url(../img/Chart-background.jpg);
@@ -273,7 +304,6 @@ p {
 .chart-section__img {
     display: block;
     margin: 0 auto;
-    margin-bottom: 30px;
     width: 80%;
     border-radius: 20px;
     box-shadow: 5px 5px 15px var(--shadow-color);
@@ -282,6 +312,7 @@ p {
 #chart-img-1 {
     width: 40%;
     height: auto;
+    margin-bottom: 30px;
 }
 
 /* Footer*/
@@ -325,16 +356,178 @@ p {
 /* Map Script*/
 #mapscript {
     margin-top: 70px;
-    
 }
 /* Map NavBar*/
-.map-navbar{
-    background-color: #615D6C;
+.map-navbar {
+    background-color: #615d6c;
 }
-
 
 /* Map Page Footer*/
 .map-footer {
     background-color: white;
     background-image: none;
+}
+
+/*480 768 1280*/
+/*Screen size 1280*/
+@media screen and (max-width: 1280px) {
+    .container {
+        padding: 50px 60px;
+    }
+
+    /*Header*/
+    .navbar {
+        padding: 0 60px;
+    }
+
+    /*Hero section*/
+    .hero-section__text-block {
+        max-width: 320px;
+    }
+
+    /*Charts section*/
+    #chart-img-1 {
+        width: 50%;
+    }
+}
+
+/*Screen size 768*/
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    h1 {
+        font-size: 100px;
+        text-align: left;
+    }
+
+    /*Header*/
+    .navbar {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .logo img {
+        max-width: 50px;
+    }
+
+    .navbar__mobile-menu {
+        width: 100%;
+        padding: 0 60px;
+    }
+
+    .navbar__mobile-menu-button {
+        display: block;
+    }
+
+    .navbar__links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--shadow-color);
+        width: 100%;
+        gap: 0px;
+    }
+
+    .navbar__links-item {
+        margin: 20px 0;
+    }
+
+    /*Hero section*/
+    .hero-section__text-block {
+        max-width: 260px;
+    }
+
+    .search-input {
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .search-button {
+        padding: 10px 14px;
+    }
+
+    /*Cards section*/
+    .dinosaur-section__cards-container {
+        margin-bottom: 30px;
+        gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+    }
+
+    .dinosaur-section__card {
+        max-width: 224px;
+        padding: 10px 10px 28px;
+    }
+
+    .dinosaur-section__card-item {
+        width: 204px;
+    }
+
+    .dinosaur-section__card-img {
+        height: 240px;
+    }
+
+    /*Charts section*/
+    .chart-section__container {
+        padding-top: 0;
+    }
+
+    #chart-img-1 {
+        width: 80%;
+    }
+
+    /*Footer*/
+    .footer {
+        padding: 20px 60px;
+    }
+}
+
+/*Screen size 480*/
+@media screen and (max-width: 480px) {
+    body {
+        line-height: 1.2;
+    }
+
+    .container {
+        padding: 40px 30px;
+    }
+
+    h1 {
+        font-size: 80px;
+    }
+
+    /*Header*/
+    .navbar__mobile-menu {
+        padding: 0 30px;
+    }
+
+    /*Hero section*/
+    .hero-section {
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .hero-section__text-block {
+        margin-bottom: 15%;
+    }
+
+    .hero-section__text-block-welcome-text {
+        background-color: var(--shadow-color);
+        padding: 10px;
+        border-radius: 20px;
+        color: var(--secondary-color-transparent);
+    }
+
+    /*Charts section*/
+    .chart-section__container {
+        padding-top: 0;
+    }
+}
+
+/*Menu visibility*/
+.is-open {
+    display: flex;
 }

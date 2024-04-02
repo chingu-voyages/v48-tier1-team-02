@@ -4,8 +4,9 @@ const cardContainer = document.getElementById("cards-container");
 const showMoreButton = document.getElementById("showMoreBtn");
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
+let mobileMenuBtn = document.querySelector(".navbar__mobile-menu-button");
 
-// Initialize the variables 
+// Initialize the variables
 let cardsData = [];
 let visibleCards = 20;
 let totalCards;
@@ -27,8 +28,8 @@ searchBtn.addEventListener("click", () => {
 
 // Function to display cards
 async function displayCards() {
-  await fetchData(); 
-  renderCards(); 
+  await fetchData();
+  renderCards();
   showMoreButton.addEventListener("click", loadMoreCards);
   // Event listener on searchInput
   searchInput.addEventListener("keyup", (e) => {
@@ -43,7 +44,7 @@ async function displayCards() {
 
 // Function to renderCards on the page
 function renderCards(filteredData) {
-  cardContainer.innerHTML = ""; 
+  cardContainer.innerHTML = "";
   const dataToRender = filteredData || cardsData;
   // if No result found (diaplaying message)
   if (dataToRender.length === 0) {
@@ -52,10 +53,10 @@ function renderCards(filteredData) {
     // if result found (displaying cards)
     dataToRender.slice(0, visibleCards).forEach((card) => {
       const cardElement = createCardElement(card);
-      cardContainer.appendChild(cardElement); 
+      cardContainer.appendChild(cardElement);
     });
   }
-  toggleShowMoreButton(); 
+  toggleShowMoreButton();
 }
 
 // Function to create card
@@ -98,7 +99,6 @@ function createCardElement(card) {
   </button>
   </div>
   `;
-
   cardElement.appendChild(cardDetailsDiv);
   // Show more button
   const button = cardElement.querySelector(".dinosaur-section__card-button");
@@ -111,7 +111,7 @@ function createCardElement(card) {
   return cardElement;
 }
 
-// Load more Cards function 
+// Load more Cards function
 function loadMoreCards() {
   visibleCards += 8;
   renderCards();
@@ -120,7 +120,7 @@ function loadMoreCards() {
 // Toggle Show More Button
 function toggleShowMoreButton() {
   if (visibleCards >= totalCards) {
-    showMoreButton.style.display = "none"; 
+    showMoreButton.style.display = "none";
   } else {
     showMoreButton.style.display = "block";
   }
@@ -135,14 +135,13 @@ function handleSearch() {
   });
 
   // Render filtered cards
-  renderCards(filteredData); 
+  renderCards(filteredData);
   // Scroll to dinosaurs section
-  window.location.href = "#dinosaurs"; 
+  window.location.href = "#dinosaurs";
   // hidding search suggestions
   const SuggestionsDiv = document.getElementById("suggestionContainer");
   SuggestionsDiv.style.display = "none";
 }
-
 
 // Show Search Suggestion function
 function showSearchSuggestions(searchTerm) {
@@ -157,11 +156,11 @@ function showSearchSuggestions(searchTerm) {
   suggestions.forEach((suggestion) => {
     const suggestionElement = document.createElement("div");
     suggestionElement.textContent = suggestion.name;
-    suggestionElement.classList.add("search-suggestions"); 
+    suggestionElement.classList.add("search-suggestions");
     // Event listener on suggestion
     suggestionElement.addEventListener("click", () => {
-      searchInput.value = suggestion.name; 
-      searchSuggestionsDiv.style.display = "none"; 
+      searchInput.value = suggestion.name;
+      searchSuggestionsDiv.style.display = "none";
     });
     searchSuggestionsDiv.appendChild(suggestionElement);
   });
@@ -170,6 +169,24 @@ function showSearchSuggestions(searchTerm) {
     suggestions.length > 0 ? "block" : "none";
 }
 
+/*Open/close mobile menu*/
+function showMobileMenu() {
+  let navLinks = document.querySelector(".navbar__links");
+  let linkItems = document.querySelectorAll(".navbar__links-item");
+
+  //Open mobile menu and change icon
+  if (navLinks.classList.toggle("is-open")) {
+    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>'; //Close
+  } else {
+    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+  }
+
+  //Close navmenu if one of the link clicked
+  for (link of linkItems) {
+    link.addEventListener("click", showMobileMenu);
+  }
+}
 
 // Display Cards
 displayCards();
+mobileMenuBtn.addEventListener("click", showMobileMenu);
