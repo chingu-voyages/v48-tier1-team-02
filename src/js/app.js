@@ -4,6 +4,7 @@ const cardContainer = document.getElementById("cards-container");
 const showMoreButton = document.getElementById("showMoreBtn");
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
+let mobileMenuBtn = document.querySelector(".navbar__mobile-menu-button");
 
 // Initialize the variables
 let cardsData = [];
@@ -98,19 +99,9 @@ function createCardElement(card) {
   </button>
   </div>
   `;
-
   cardElement.appendChild(cardDetailsDiv);
-  // Show more button
 
-  console.log(cardElement);
-  console.log(cardDetailsDiv);
-
-  //Rotate the card with the click on all card's space
-  /*cardElement.addEventListener("click", function () {
-        cardElement.classList.toggle("is-flipped");
-    });*/
-
-  //Rotate the card with the button
+  //Rotate the card with the button click
   const button = cardElement.querySelector(".dinosaur-section__card-button");
   button.addEventListener("click", () => {
     cardElement.classList.toggle("is-flipped");
@@ -122,6 +113,11 @@ function createCardElement(card) {
   });
 
   /*
+  //Rotate the card with the click on all card's space
+  cardElement.addEventListener("click", function () {
+        cardElement.classList.toggle("is-flipped");
+    });
+
   //Show details on the bottom of the card
   const button = cardElement.querySelector(".dinosaur-section__card-button");
     button.addEventListener("click", () => {
@@ -131,7 +127,7 @@ function createCardElement(card) {
         );
         console.log("clicked");
     });*/
-  console.log("2: ", cardElement);
+
   return cardElement;
 }
 
@@ -193,5 +189,24 @@ function showSearchSuggestions(searchTerm) {
     suggestions.length > 0 ? "block" : "none";
 }
 
+/*Open/close mobile menu*/
+function showMobileMenu() {
+  let navLinks = document.querySelector(".navbar__links");
+  let linkItems = document.querySelectorAll(".navbar__links-item");
+
+  //Open mobile menu and change icon
+  if (navLinks.classList.toggle("is-open")) {
+    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>'; //Close
+  } else {
+    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+  }
+
+  //Close navmenu if one of the link clicked
+  for (link of linkItems) {
+    link.addEventListener("click", showMobileMenu);
+  }
+}
+
 // Display Cards
 displayCards();
+mobileMenuBtn.addEventListener("click", showMobileMenu);
