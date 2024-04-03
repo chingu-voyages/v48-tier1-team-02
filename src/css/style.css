@@ -189,26 +189,44 @@ p {
 }
 
 .dinosaur-section__card {
-    max-width: 278px;
-    padding: 12px 12px 38px;
+    width: 278px;
+    height: 320px;
     background-color: var(--primary-color-light);
     border-radius: 20px;
     box-shadow: 5px 5px 15px var(--shadow-color);
 
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  
     /*Umer's changes*/
-    overflow: auto;
+    /* overflow: auto;*/
     scrollbar-width: none;
+
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    /*cursor: pointer;*/
 }
 
-.dinosaur-section__card-item {
-    position: relative;
+.dinosaur-section__card-item,
+.dinosaur-section__card-details {
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    left: 4%;
+    bottom: 11%;
+    backface-visibility: hidden;
+}
+
+.dinosaur-section__card-details {
+    transform: rotateY(180deg);
+    overflow: auto;
+    top: 8%;
+    right: 8%;
+    left: 8%;
+    bottom: 8%;
+    cursor: pointer;
 }
 
 .dinosaur-section__card-img {
+    /* width: 254px;*/
     width: 100%;
     height: 270px;
     border-radius: 20px;
@@ -225,27 +243,27 @@ p {
     text-transform: capitalize;
 
     position: absolute;
-    bottom: -7%;
-    left: 6px;
-    right: 6px;
-    /* padding: 12px 0;*/
+    bottom: -8%;
+    left: 4%;
+    right: 4%;
 }
 
 .arrow-icon {
     font-size: 18px;
 }
 
-.dinosaur-section__card-details {
-    display: none;
-    overflow: auto;
+/*.dinosaur-section__card-details--visible {
+   display: block;
+}*/
+
+.is-flipped {
+    transform: rotateY(180deg);
 }
 
-.dinosaur-section__card-details--visible {
-    display: block;
-}
 #cards-container {
-    font-size: 1.5rem;
+    /*font-size: 1.5rem;*/
 }
+
 #cards-container h2 span {
     color: var(--primary-brand-color);
 }
@@ -256,7 +274,6 @@ p {
     padding: 16px 44px;
     background-color: transparent;
 }
-
 
 /* Chart section */
 .chart-section {
@@ -325,13 +342,11 @@ p {
 /* Map Script*/
 #mapscript {
     margin-top: 70px;
-    
 }
 /* Map NavBar*/
-.map-navbar{
-    background-color: #615D6C;
+.map-navbar {
+    background-color: #615d6c;
 }
-
 
 /* Map Page Footer*/
 .map-footer {
