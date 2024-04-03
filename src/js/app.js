@@ -100,13 +100,33 @@ function createCardElement(card) {
   </div>
   `;
   cardElement.appendChild(cardDetailsDiv);
-  // Show more button
+
+  //Rotate the card with the button click
   const button = cardElement.querySelector(".dinosaur-section__card-button");
   button.addEventListener("click", () => {
-    // Toggle the Card Details
-    cardDetailsDiv.classList.toggle("dinosaur-section__card-details--visible");
-    console.log("clicked");
+    cardElement.classList.toggle("is-flipped");
   });
+
+  //Rotate the card with the click on detail's side
+  cardDetailsDiv.addEventListener("click", function () {
+    cardElement.classList.toggle("is-flipped");
+  });
+
+  /*
+  //Rotate the card with the click on all card's space
+  cardElement.addEventListener("click", function () {
+        cardElement.classList.toggle("is-flipped");
+    });
+
+  //Show details on the bottom of the card
+  const button = cardElement.querySelector(".dinosaur-section__card-button");
+    button.addEventListener("click", () => {
+        // Toggle the Card Details
+        cardDetailsDiv.classList.toggle(
+            "dinosaur-section__card-details--visible"
+        );
+        console.log("clicked");
+    });*/
 
   return cardElement;
 }
