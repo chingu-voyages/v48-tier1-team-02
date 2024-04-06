@@ -18,20 +18,26 @@
 <body>
     <div>
         <div>
-        <header>
-            <div class="navbar map-navbar">
-              <div class="logo">
-                <a href="index.html">
-                  <img src="src/img/Logo.png" alt="DinoWorld Logo" />
-                </a>
-                <!-- Replace 'logo' with dino logo -->
+          <header>
+            <nav class="navbar map-navbar">
+              <div class="navbar__mobile-menu">
+                <div class="logo">
+                  <a href="/">
+                    <img src="src/img/Logo.png" alt="DinoWorld Logo" />
+                  </a>
+                </div>
+                <button type="button" class="navbar__mobile-menu-button">
+                  <i class="fa-solid fa-bars"></i>
+                </button>
               </div>
-              <div class="navbar-links">
-                <a href="index.html#dinosaurs">List of Dinos</a>
-                <a href="index.html#chart">Charts</a>
-                <a href="dinosaurs around the world.html">Map</a>
+              <div class="navbar__links">
+                <a href="/dinosaurs" class="navbar__links-item">List of Dinos</a>
+                <a href="/chart" class="navbar__links-item">Charts</a>
+                <a href="dinosaurs around the world.html" class="navbar__links-item"
+                  >Map</a
+                >
               </div>
-            </div>
+            </nav>
           </header>
         </div>
           <div id="mapscript">

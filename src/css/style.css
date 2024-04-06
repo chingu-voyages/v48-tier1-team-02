@@ -373,16 +373,16 @@ p {
 
 /* Map Script*/
 #mapscript {
-  margin-top: 70px;
+  margin-top: 63px;
 }
 /* Map NavBar*/
 .map-navbar {
-  background-color: #615d6c;
+  background-color: #153b50;
 }
 
 /* Map Page Footer*/
 .map-footer {
-  background-color: white;
+  background-color: #153b50;
   background-image: none;
 }
 
@@ -453,6 +453,8 @@ p {
   .navbar__links-item {
     margin: 20px 0;
   }
+
+
 
   /*Hero section*/
   .hero-section__text-block {
