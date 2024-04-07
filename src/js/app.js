@@ -5,6 +5,7 @@ const showMoreButton = document.getElementById("showMoreBtn");
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
 let mobileMenuBtn = document.querySelector(".navbar__mobile-menu-button");
+let scrollBtn = document.querySelector(".scroll-button");
 
 // Initialize the variables
 let cardsData = [];
@@ -22,7 +23,7 @@ async function fetchData() {
 // Event listener on searchBtn
 searchBtn.addEventListener("click", () => {
   handleSearch();
-  searchBtn.innerText = "";
+  searchInput.value = "";
   window.location.href = "#dinosaurs";
 });
 
@@ -207,6 +208,19 @@ function showMobileMenu() {
   }
 }
 
+//Show scroll button
+function showScrollBtn() {
+  scrollBtn.classList.toggle("scroll-button--active", window.scrollY > 700);
+}
+
+//Scroll to main page
+function moveToTopScreen() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 // Display Cards
 displayCards();
 mobileMenuBtn.addEventListener("click", showMobileMenu);
+scrollBtn.addEventListener("click", moveToTopScreen);
+
+window.addEventListener("scroll", showScrollBtn);

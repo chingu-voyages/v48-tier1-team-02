@@ -171,6 +171,11 @@ p {
   font-size: 16px;
 }
 
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.6px var(--primary-color-dark);
+}
+
 .search-button {
   padding: 10px 18px;
   border: 1px solid var(--primary-color-dark);
@@ -188,7 +193,7 @@ p {
   bottom: 100%;
   left: 0;
   right: 0;
-  background-color: #fff;
+  background-color: var(--primary-color-light);
   border-radius: 5px;
   width: 100%;
   max-height: 150px;
@@ -196,13 +201,15 @@ p {
   scroll-behavior: smooth;
   scrollbar-width: 0;
 }
-#suggestionContainer:hover {
-  color: black !important;
-}
+
 .search-suggestions {
-  color: black !important;
+  color: var(--secondary-color-transparent);
   padding: 10px;
   cursor: pointer;
+}
+
+.search-suggestions:hover {
+  color: var(--primary-brand-color);
 }
 
 /* Cards section*/
@@ -226,15 +233,11 @@ p {
   background-color: var(--primary-color-light);
   border-radius: 20px;
   box-shadow: 5px 5px 15px var(--shadow-color);
-
-  /*Umer's changes*/
-  /* overflow: auto;*/
   scrollbar-width: none;
 
   position: relative;
   transition: transform 1s;
   transform-style: preserve-3d;
-  /*cursor: pointer;*/
 }
 
 .dinosaur-section__card-item,
@@ -255,6 +258,7 @@ p {
   left: 20px;
   bottom: 20px;
   cursor: pointer;
+  color: var(--secondary-color);
 }
 
 .dinosaur-section__card-img {
@@ -284,16 +288,8 @@ p {
   font-size: 18px;
 }
 
-/*.dinosaur-section__card-details--visible {
-   display: block;
-}*/
-
 .is-flipped {
   transform: rotateY(180deg);
-}
-
-#cards-container {
-  /*font-size: 1.5rem;*/
 }
 
 #cards-container h2 span {
@@ -369,6 +365,25 @@ p {
 
 .footer__link:hover {
   color: var(--primary-brand-color);
+}
+
+.scroll-button {
+  font-size: 42px;
+  color: var(--primary-color-dark);
+  position: fixed;
+  right: 34px;
+  bottom: 14px;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.scroll-button:hover {
+  color: var(--primary-brand-color);
+  cursor: pointer;
+}
+
+.scroll-button--active {
+  opacity: 1;
 }
 
 /* Map Script*/
@@ -503,6 +518,11 @@ p {
   /*Footer*/
   .footer {
     padding: 20px 60px;
+  }
+
+  .scroll-button {
+    font-size: 32px;
+    right: 18px;
   }
 }
 
