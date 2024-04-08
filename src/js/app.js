@@ -64,14 +64,12 @@ function renderCards(filteredData) {
 function createCardElement(card) {
   const cardElement = document.createElement("div");
   cardElement.classList.add("dinosaur-section__card");
-  // Checking if the card has description or not (and keeping des shorter)
-  let truncatedDescription =
-    card.description.length > 150
-      ? card.description.substring(0, 150) + "..."
-      : card.description;
-  if (truncatedDescription.trim() === "N/A") {
-    truncatedDescription = "This dinosaur has no description";
+
+  let cardDescription = card.description;
+  if (cardDescription === "N/A") {
+    cardDescription = "This dinosaur has no description.";
   }
+
   // Card Details Container here
   const cardDetailsDiv = document.createElement("div");
   cardDetailsDiv.classList.add("dinosaur-section__card-details");
@@ -80,10 +78,11 @@ function createCardElement(card) {
     <p><strong>Type: </strong>${card.typeOfDinosaur}</p>
     <p><strong>Length: </strong>${card.length}m</p>
     <p><strong>Diet: </strong>${card.diet}</p>
+    <p><strong>When Lived: </strong>${card.whenLived}</p>
     <p><strong>Found In: </strong>${card.foundIn}</p>
     <p><strong>Named By: </strong>${card.namedBy}</p>
     <p><strong>Type Species: </strong>${card.typeSpecies}</p>
-    <p>${truncatedDescription}</p>
+    <p><strong>Description: </strong>${cardDescription}</p>
   `;
 
   // Adding card Info
@@ -182,6 +181,8 @@ function showSearchSuggestions(searchTerm) {
     suggestionElement.addEventListener("click", () => {
       searchInput.value = suggestion.name;
       searchSuggestionsDiv.style.display = "none";
+            // Execute search here
+            handleSearch();
     });
     searchSuggestionsDiv.appendChild(suggestionElement);
   });
@@ -189,6 +190,9 @@ function showSearchSuggestions(searchTerm) {
   searchSuggestionsDiv.style.display =
     suggestions.length > 0 ? "block" : "none";
 }
+
+
+
 
 /*Open/close mobile menu*/
 function showMobileMenu() {
