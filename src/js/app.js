@@ -64,6 +64,11 @@ function createCardElement(card) {
   const cardElement = document.createElement("div");
   cardElement.classList.add("dinosaur-section__card");
 
+  let cardDescription = card.description;
+  if (cardDescription === "N/A") {
+    cardDescription = "This dinosaur has no description.";
+  }
+
   // Card Details Container here
   const cardDetailsDiv = document.createElement("div");
   cardDetailsDiv.classList.add("dinosaur-section__card-details");
@@ -76,7 +81,7 @@ function createCardElement(card) {
     <p><strong>Found In: </strong>${card.foundIn}</p>
     <p><strong>Named By: </strong>${card.namedBy}</p>
     <p><strong>Type Species: </strong>${card.typeSpecies}</p>
-    <p><strong>Description: </strong>${card.description}</p>
+    <p><strong>Description: </strong>${cardDescription}</p>
   `;
 
   // Adding card Info
