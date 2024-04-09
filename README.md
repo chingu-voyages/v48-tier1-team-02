@@ -7,11 +7,11 @@
 3. [Web App Development](#web-app-development)
 4. [Our Team](#our-team)
 
-## 1. Project Overview 
+## Project Overview 
 
 Dinoworld is an adventure based discovery about the different types of dinosaurs that have existed around the globe highlighting the characteristics of each individual dinosaurs along with the types of diet and what percentage of them eat based on their species. This webapp provides a great **all-in-one** learning tool for people of all ages and develops the knowledge and history you need to know about the dinosaurs.
 
-## 2. Key Features
+## Key Features
 
 * List of 75 dinosaurs with key characteristics and description.
 * A search bar for filtering out dinosaurs by name among the list.
@@ -20,7 +20,7 @@ Dinoworld is an adventure based discovery about the different types of dinosaurs
 * An interactive map page showcasing all the dinosaurs found in different countries, continents, and cities around the world.
 * Responsiveness and user-friendly across all devices.
 
-## 3. Web App Development
+## Web App Development
 
 ### [HTML](#html)
 
@@ -77,7 +77,7 @@ Each file contributes to different aspects of the webpage, collectively creating
     
 Overall, the team used a combination of Python libraries such as json, requests, pandas, numpy, matplotlib, seaborn, plotly.express, and geopy to load data, create visualizations (pie chart, map, and bar chart), and handle geographical data in the dino dataset.
 
-## 4. Our Team
+## Our Team
 
 - Ahmed Sohail `Data Scientist`: [GitHub](https://github.com/Ahmed-Sohail2000) / [LinkedIn](https://www.linkedin.com/in/ahmed-sohail/)
   
