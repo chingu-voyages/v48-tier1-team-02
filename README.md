@@ -5,8 +5,7 @@
 1. [Project Overview](#project-overview)
 2. [Key Features](#key-features)
 3. [Web App Development](#web-app-development)
-4. [Developers](#deverlopers)
-5. [Our Team](#our-team)
+4. [Our Team](#our-team)
 
 ## 1. Project Overview 
 
@@ -78,18 +77,13 @@ Each file contributes to different aspects of the webpage, collectively creating
     
 Overall, the team used a combination of Python libraries such as json, requests, pandas, numpy, matplotlib, seaborn, plotly.express, and geopy to load data, create visualizations (pie chart, map, and bar chart), and handle geographical data in the dino dataset.
 
+## 4. Our Team
 
-## 4. Developers
-
-* Voyage Guide: `Ksenia Riabova`
-* Web Developers: `Sharaf Anees`, `Nadiia Lashtun`, `Umer khokhar`, `Florin Rosoga`
-* Data Scientist: `Ahmed Sohail`
-
-
-## 5. Our Team
-
-- Ahmed Sohail: [GitHub](https://github.com/Ahmed-Sohail2000) / [LinkedIn](https://www.linkedin.com/in/ahmed-sohail/)
-- Sharaf Anees: [GitHub](https://github.com/sharafcs50) / [LinkedIn](https://www.linkedin.com/in/sharafrica/)
-- Nadiia Lashtun: [GitHub](https://github.com/Nadiia-Lashtun) / [LinkedIn](https://www.linkedin.com/in/lashtun/)
-- Umer Khokhar: [GitHub](https://github.com/Umer-Khokhar) / [LinkedIn](https://www.linkedin.com/in/umer-khokhar-642301284/)
-- Florin Roșoga: [GitHub](https://github.com/florinrosoga/) / [LinkedIn](https://www.linkedin.com/in/florinrosoga/)
+- Ahmed Sohail `Data Scientist`: [GitHub](https://github.com/Ahmed-Sohail2000) / [LinkedIn](https://www.linkedin.com/in/ahmed-sohail/)
+  
+- Sharaf Anees `Developer`: [GitHub](https://github.com/sharafcs50) / [LinkedIn](https://www.linkedin.com/in/sharafrica/)
+- Nadiia Lashtun `Developer`: [GitHub](https://github.com/Nadiia-Lashtun) / [LinkedIn](https://www.linkedin.com/in/lashtun/)
+- Umer Khokhar `Developer`: [GitHub](https://github.com/Umer-Khokhar) / [LinkedIn](https://www.linkedin.com/in/umer-khokhar-642301284/)
+- Florin Roșoga `Developer`: [GitHub](https://github.com/florinrosoga/) / [LinkedIn](https://www.linkedin.com/in/florinrosoga/)
+  
+- Kseniia Riabova `Voyage Guide`: [GitHub](https://github.com/KseniiaRiabova) / [LinkedIn](https://www.linkedin.com/in/kseniia--riabova/)
