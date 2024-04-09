@@ -199,21 +199,22 @@ p {
 
 #suggestionContainer {
   position: absolute;
-  bottom: 100%;
-  left: 0;
-  right: 0;
+  top: 100%;
+  left: 5%;
+  right: 5%;
   background-color: var(--primary-color-light);
   border-radius: 5px;
-  width: 100%;
-  max-height: 150px;
+  width: 90%;
+  max-height: 110px;
   overflow-y: auto;
   scroll-behavior: smooth;
   scrollbar-width: 0;
+  z-index: 999;
 }
 
 .search-suggestions {
   color: var(--secondary-color-transparent);
-  padding: 10px;
+  padding: 6px;
   cursor: pointer;
 }
 
@@ -411,7 +412,7 @@ p {
 }
 
 /*480 768 1280*/
-/*Screen size 1280*/
+/*Screen size 1280 Portrait tablets and medium desktops*/
 @media screen and (max-width: 1280px) {
   .container {
     padding: 50px 60px;
@@ -424,7 +425,7 @@ p {
 
   /*Hero section*/
   .hero-section__text-block {
-    max-width: 320px;
+    max-width: 380px;
   }
 
   /*Charts section*/
@@ -433,8 +434,8 @@ p {
   }
 }
 
-/*Screen size 768*/
-@media screen and (max-width: 768px) {
+/*Screen size 992 Portrait tablets and small desktops */
+@media screen and (max-width: 992px) {
   body {
     font-size: 14px;
     line-height: 1.4;
@@ -442,7 +443,26 @@ p {
 
   h1 {
     font-size: 100px;
+    line-height: 0.7;
+    /*letter-spacing: 2px;*/
+  }
+
+  /*Hero section*/
+  .hero-section__text-block {
+    max-width: 310px;
+    gap: 12px;
+  }
+
+  #suggestionContainer {
+    max-height: 98px;
+  }
+}
+
+/*Screen size 768 Landscape phones and portrait tablets*/
+@media screen and (max-width: 768px) {
+  h1 {
     text-align: left;
+    line-height: 0.6;
   }
 
   /*Header*/
@@ -477,8 +497,6 @@ p {
   .navbar__links-item {
     margin: 20px 0;
   }
-
-
 
   /*Hero section*/
   .hero-section__text-block {
@@ -537,7 +555,7 @@ p {
   }
 }
 
-/*Screen size 480*/
+/*Screen size 480 Landscape phones and smaller*/
 @media screen and (max-width: 480px) {
   body {
     line-height: 1.2;
@@ -563,7 +581,8 @@ p {
   }
 
   .hero-section__text-block {
-    margin-bottom: 15%;
+    margin-bottom: 30%;
+    gap: 8px;
   }
 
   .hero-section__text-block-welcome-text {
@@ -571,6 +590,10 @@ p {
     padding: 10px;
     border-radius: 20px;
     color: var(--secondary-color-transparent);
+  }
+
+  #suggestionContainer {
+    max-height: 90px;
   }
 
   /*Charts section*/
@@ -601,7 +624,6 @@ p {
 
 /* Customize scrollbar handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  
   background-color: #e0fbfc73; /* Make the thumb transparent */
   border: 2px solid var(--primary-brand-color); /* Add borders to the thumb */
   border-radius: 2px; /* Add border radius to the thumb */

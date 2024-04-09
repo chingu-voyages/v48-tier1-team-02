@@ -4,6 +4,7 @@ const cardContainer = document.getElementById("cards-container");
 const showMoreButton = document.getElementById("showMoreBtn");
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
+const suggestionList = document.getElementById("suggestionContainer");
 let mobileMenuBtn = document.querySelector(".navbar__mobile-menu-button");
 let scrollBtn = document.querySelector(".scroll-button");
 
@@ -23,7 +24,6 @@ async function fetchData() {
 // Event listener on searchBtn
 searchBtn.addEventListener("click", () => {
   handleSearch();
-  searchInput.value = "";
   window.location.href = "#dinosaurs";
 });
 
@@ -37,9 +37,20 @@ async function displayCards() {
     // Checking if Enter key is pressed
     if (e.key === "Enter") {
       handleSearch();
+    } else if (e.key === "Escape") {
+      //Hide Suggestion List
+      suggestionList.style.display = "none";
+    } else {
+      // Calling the showSearchSuggestions function to show suggestions
+      showSearchSuggestions(searchInput.value.toLowerCase());
     }
-    // Calling the showSearchSuggestions function to show suggestions
-    showSearchSuggestions(searchInput.value.toLowerCase());
+  });
+
+  //Show suggestions if input not empty and in focus
+  searchInput.addEventListener("focus", () => {
+    if (searchInput.value.trim().length) {
+      suggestionList.style.display = "block";
+    }
   });
 }
 
@@ -116,16 +127,6 @@ function createCardElement(card) {
   //Rotate the card with the click on all card's space
   cardElement.addEventListener("click", function () {
         cardElement.classList.toggle("is-flipped");
-    });
-
-  //Show details on the bottom of the card
-  const button = cardElement.querySelector(".dinosaur-section__card-button");
-    button.addEventListener("click", () => {
-        // Toggle the Card Details
-        cardDetailsDiv.classList.toggle(
-            "dinosaur-section__card-details--visible"
-        );
-        console.log("clicked");
     });*/
 
   return cardElement;
@@ -161,6 +162,8 @@ function handleSearch() {
   // hidding search suggestions
   const SuggestionsDiv = document.getElementById("suggestionContainer");
   SuggestionsDiv.style.display = "none";
+  //Clear search input
+  searchInput.value = "";
 }
 
 // Show Search Suggestion function
@@ -181,8 +184,8 @@ function showSearchSuggestions(searchTerm) {
     suggestionElement.addEventListener("click", () => {
       searchInput.value = suggestion.name;
       searchSuggestionsDiv.style.display = "none";
-            // Execute search here
-            handleSearch();
+      // Execute search here
+      handleSearch();
     });
     searchSuggestionsDiv.appendChild(suggestionElement);
   });
@@ -190,9 +193,6 @@ function showSearchSuggestions(searchTerm) {
   searchSuggestionsDiv.style.display =
     suggestions.length > 0 ? "block" : "none";
 }
-
-
-
 
 /*Open/close mobile menu*/
 function showMobileMenu() {
@@ -222,9 +222,28 @@ function moveToTopScreen() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+//Check click without suggestion list
+function clickOnFreeSpace() {
+  document.addEventListener("click", (event) => {
+    const withinSuggestionList = event.composedPath().includes(suggestionList);
+    const withinInput = event.composedPath().includes(searchInput);
+
+    if (!withinInput && !withinSuggestionList) {
+      //Hide Suggestion List
+      suggestionList.style.display = "none";
+    }
+  });
+}
+
 // Display Cards
 displayCards();
-mobileMenuBtn.addEventListener("click", showMobileMenu);
-scrollBtn.addEventListener("click", moveToTopScreen);
 
+//Show mobile menu
+mobileMenuBtn.addEventListener("click", showMobileMenu);
+
+//Check the clicking scroll up button.
+scrollBtn.addEventListener("click", moveToTopScreen);
 window.addEventListener("scroll", showScrollBtn);
+
+// Click on free place to close Suggestion List
+clickOnFreeSpace();
