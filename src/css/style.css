@@ -107,6 +107,7 @@ p {
 .navbar__links {
   display: flex;
   gap: 60px; /* Space between links */
+  z-index: 999;
 }
 
 .navbar__links-item {
@@ -114,6 +115,7 @@ p {
   color: var(--secondary-color-transparent); /* Dark grey color */
   font-size: 16px;
   transition: all 0.5s ease-in-out;
+  z-index: 999;
 }
 
 .navbar__links-item:hover {
@@ -537,6 +539,7 @@ p {
   }
 }
 
+
 /*Screen size 480*/
 @media screen and (max-width: 480px) {
   body {
@@ -578,6 +581,8 @@ p {
     padding-top: 0;
   }
 }
+
+
 
 /*Menu visibility*/
 .is-open {

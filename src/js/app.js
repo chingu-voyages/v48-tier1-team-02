@@ -21,11 +21,13 @@ async function fetchData() {
 }
 
 // Event listener on searchBtn
+if (searchBtn) {
 searchBtn.addEventListener("click", () => {
   handleSearch();
   searchInput.value = "";
   window.location.href = "#dinosaurs";
 });
+}
 
 // Function to display cards
 async function displayCards() {
@@ -225,6 +227,8 @@ function moveToTopScreen() {
 // Display Cards
 displayCards();
 mobileMenuBtn.addEventListener("click", showMobileMenu);
+if (scrollBtn) {
 scrollBtn.addEventListener("click", moveToTopScreen);
+}
 
 window.addEventListener("scroll", showScrollBtn);
