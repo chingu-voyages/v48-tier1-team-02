@@ -22,10 +22,12 @@ async function fetchData() {
 }
 
 // Event listener on searchBtn
+if (searchBtn) {
 searchBtn.addEventListener("click", () => {
   handleSearch();
   window.location.href = "#dinosaurs";
 });
+}
 
 // Function to display cards
 async function displayCards() {
