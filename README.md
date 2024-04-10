@@ -82,7 +82,7 @@ Overall, the team used a combination of Python libraries such as json, requests,
 - Ahmed Sohail `Data Scientist`: [GitHub](https://github.com/Ahmed-Sohail2000) / [LinkedIn](https://www.linkedin.com/in/ahmed-sohail/)
   
 - Sharaf Anees `Developer`: [GitHub](https://github.com/sharafcs50) / [LinkedIn](https://www.linkedin.com/in/sharafrica/)
-- Nadiia Lashtun `Developer`: [GitHub](https://github.com/Nadiia-Lashtun) / [LinkedIn](https://www.linkedin.com/in/lashtun/)
+- Nadiia Lashtun `Developer`: [GitHub main](https://github.com/FlorSmile) / [GitHub 2](https://github.com/Nadiia-Lashtun) / [LinkedIn](https://www.linkedin.com/in/lashtun/)
 - Umer Khokhar `Developer`: [GitHub](https://github.com/Umer-Khokhar) / [LinkedIn](https://www.linkedin.com/in/umer-khokhar-642301284/)
 - Florin Roșoga `Developer`: [GitHub](https://github.com/florinrosoga/) / [LinkedIn](https://www.linkedin.com/in/florinrosoga/)
   
