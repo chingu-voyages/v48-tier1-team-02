@@ -348,6 +348,7 @@ p {
   color: var(--secondary-brand-color);
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -359,6 +360,14 @@ p {
 }
 
 .footer__link-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer__link-block-github {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -377,6 +386,12 @@ p {
 
 .footer__link:hover {
   color: var(--primary-brand-color);
+}
+
+.footer__license {
+  color: inherit;
+  font-size: 12px;
+  text-decoration: none;
 }
 
 .scroll-button {
@@ -603,8 +618,6 @@ p {
     padding-top: 0;
   }
 }
-
-
 
 /*Menu visibility*/
 .is-open {
