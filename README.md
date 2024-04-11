@@ -3,13 +3,17 @@
 ## Table of Contents
 
 1. [Project Overview](#project-overview)
-2. [Key Features](#key-features)
-3. [Web App Development](#web-app-development)
-4. [Our Team](#our-team)
+2. [Demo](#demo)
+3. [Key Features](#key-features)
+4. [Web App Development](#web-app-development)
+5. [Our Team](#our-team)
 
 ## Project Overview 
 
 Dinoworld is an adventure based discovery about the different types of dinosaurs that have existed around the globe highlighting the characteristics of each individual dinosaurs along with the types of diet and what percentage of them eat based on their species. This webapp provides a great **all-in-one** learning tool for people of all ages and develops the knowledge and history you need to know about the dinosaurs.
+
+## Demo
+![YouTube video](https://img.youtube.com/vi/wnizqwBwo0Q/0.jpg)
 
 ## Key Features
 
