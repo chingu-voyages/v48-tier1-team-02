@@ -13,6 +13,7 @@
 Dinoworld is an adventure based discovery about the different types of dinosaurs that have existed around the globe highlighting the characteristics of each individual dinosaurs along with the types of diet and what percentage of them eat based on their species. This webapp provides a great **all-in-one** learning tool for people of all ages and develops the knowledge and history you need to know about the dinosaurs.
 
 ## Demo
+Click the image to watch the demo.
 [![Youtube video](https://github.com/chingu-voyages/v48-tier1-team-02/blob/main/screenshots/Main-page.JPG?raw=true)](https://www.youtube.com/watch?v=wnizqwBwo0Q)
 
 
